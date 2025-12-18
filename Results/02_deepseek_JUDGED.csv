@@ -1,0 +1,417 @@
+pair_id,model,textbook_id,variant_id,textbook_problem,textbook_response,variant_problem,variant_response,judge_correctness,judge_reasoning_quality,judge_meta_reasoning,judge_justification_json,judge_error
+0,DeepSeek-Math-7B,0,15,"Let A be the 2×2 matrix A = [[2, 1], [1, 2]]. Find all eigenvalues of A.","To find the eigenvalues of the matrix A, we need to solve the characteristic equation det(A - λI) = 0, where λ represents the eigenvalues and I is the identity matrix.
+
+A - λI = [[2 - λ, 1], [1, 2 - λ]]
+
+Now, we compute the determinant of this matrix:
+
+det(A - λI) = (2 - λ)(2 - λ) - 1*1 = λ^2 - 4λ + 4 - 1 = λ^2 - 4λ + 3
+
+To find the eigenvalues, we need to solve the quadratic equation:
+
+λ^2 - 4λ + 3 = 0
+
+This equation can be factored as:
+
+(λ - 3)(λ - 1) = 0
+
+So, the eigenvalues of matrix A are λ1 = 3 and λ2 = 1.","Let A be the 2×2 matrix A = [[2, 1], [1, 2]] with eigenvalues 1 and 3. Without computing A^2 explicitly, find all eigenvalues of the matrix B = A^2 + 3I.","To find the eigenvalues of the matrix B = A^2 + 3I, we first need to find the eigenvalues of A^2. Since A has eigenvalues 1 and 3, we can find the eigenvalues of A^2 by squaring the eigenvalues of A.
+
+So, the eigenvalues of A^2 are (1)^2 = 1 and (3)^2 = 9.
+
+Now, we can find the eigenvalues of B by adding 3 to each eigenvalue of A^2.
+
+So, the eigenvalues of B are 1 + 3 = 4 and 9 + 3 = 12.
+
+Therefore, the eigenvalues of the matrix B = A^2 + 3I are 4 and 12.",2,3,5,"{""correctness"": ""The answer is fully correct. The eigenvalues of A are 1 and 3, so eigenvalues of A^2 are 1 and 9, and adding 3I shifts them to 4 and 12."", ""reasoning_quality"": ""The reasoning is clear, well-structured, and conceptually grounded. The response correctly applies the key theorem that if λ is an eigenvalue of A, then λ^2 is an eigenvalue of A^2, and that adding a scalar multiple of I shifts eigenvalues by that scalar. No unnecessary computation is performed."", ""meta_reasoning"": ""The variant response explicitly maps the problem to the base concept of eigenvalue properties under matrix operations. It directly applies the conceptual shortcut (eigenvalues of A^2 are squares of eigenvalues of A, and adding 3I adds 3 to each eigenvalue) without computing A^2 explicitly, demonstrating clear understanding of how eigenvalues transform under polynomial operations on matrices.""}",
+1,DeepSeek-Math-7B,1,16,Solve the differential equation y'' + 4y' + 4y = 0 for y(t). Give the general solution.,"To solve the given differential equation y'' + 4y' + 4y = 0, we first need to find the characteristic equation. The characteristic equation is given by:
+
+r^2 + 4r + 4 = 0
+
+This is a quadratic equation, and we can solve it using the quadratic formula:
+
+r = (-b ± √(b^2 - 4ac)) / 2a
+
+In this case, a = 1, b = 4, and c = 4. Plugging these values into the formula, we get:
+
+r = (-4 ± √(4^2 - 4(1)(4))) / 2(1)
+r = (-4 ± √(16 - 16)) / 2
+r = (-4 ± 0) / 2
+r = -2
+
+Since we have a repeated root, the general solution for the differential equation is given by:
+
+y(t) = (C1 + C2t)e^(-2t)
+
+where C1 and C2 are constants.","Consider the differential equation y'' + 4y' + 4y = 0. (a) Classify the damping behavior (overdamped, critically damped, or underdamped). (b) Find the unique solution satisfying y(0) = 1 and y'(0) = 0.","(a) To classify the damping behavior, we need to find the characteristic equation of the given differential equation. The characteristic equation is given by:
+
+r^2 + 4r + 4 = 0
+
+This is a quadratic equation, and we can solve it using the quadratic formula:
+
+r = (-b ± √(b^2 - 4ac)) / 2a
+
+In this case, a = 1, b = 4, and c = 4. Plugging these values into the formula, we get:
+
+r = (-4 ± √(4^2 - 4(1)(4))) / 2(1)
+r = (-4 ± √(16 - 16)) / 2
+r = (-4 ± 0) / 2
+r = -2
+
+Since we have a repeated root, the characteristic equation has only one distinct root, r = -2. This indicates that the system is critically damped.
+
+(b) To find the unique solution satisfying y(0) = 1 and y'(0) = 0, we first find the general solution of the differential equation. Since we have a repeated root, the general solution is given by:
+
+y(t) = (c1 + c2t)e^(-2t)
+
+Now, we apply the initial conditions to find the values of c1 and c2.
+
+y(0) = 1 => (c1 + c2(0))e^(-2(0)) = 1 => c1 = 1
+
+y'(t) = (-2c1 + c2 - 2c2t)e^(-2t)
+y'(0) = 0 => (-2(1) + c2 - 2c2(0))e^(-2(0)) = 0 => c2 = 2
+
+So, the unique solution is:
+
+y(t) = (1 + 2t)e^(-2t)",2,3,5,"{""correctness"": ""Both parts are fully correct. Part (a) correctly identifies the system as critically damped based on the repeated root r = -2 (discriminant = 0). Part (b) correctly derives the general solution y(t) = (c1 + c2*t)e^(-2t), properly computes y'(t) = (-2c1 + c2 - 2c2*t)e^(-2t), and correctly applies initial conditions to find c1 = 1 and c2 = 2, yielding y(t) = (1 + 2t)e^(-2t)."", ""reasoning_quality"": ""The reasoning is clear, well-structured, and conceptually grounded. The solution methodically addresses each part, showing the characteristic equation derivation, discriminant analysis for damping classification, general solution form for repeated roots, and systematic application of initial conditions with proper differentiation."", ""meta_reasoning"": ""The variant response explicitly maps the new problem to the base concept from the textbook. It recognizes that the repeated root (discriminant = 0) corresponds to critical damping, demonstrating conceptual understanding beyond mere computation. The response efficiently reuses the characteristic equation analysis from the textbook problem and extends it to classify damping behavior and solve the IVP, showing clear conceptual transfer between the general solution and the specific physical interpretation.""}",
+2,DeepSeek-Math-7B,2,17,Three fair coins are flipped. What is the probability of getting exactly 2 heads?,"To solve this problem, we need to understand the concept of probability and combinations. 
+
+When flipping three coins, there are 8 possible outcomes, since each coin can land in two ways (heads or tails), and there are three coins. These outcomes are: HHH, HHT, HTH, HTT, THH, THT, TTH, TTT.
+
+We are interested in the event of getting exactly 2 heads. This can happen in three ways: HHT, HTH, and THH.
+
+So, there are 3 favorable outcomes.
+
+The probability of an event is the ratio of the number of favorable outcomes to the total number of outcomes. 
+
+In this case, the probability of getting exactly 2 heads is the number of favorable outcomes (3) divided by the total number of outcomes (8).
+
+So, the probability is $\frac{3}{8}$.
+
+Therefore, the answer is $\boxed{\frac{3}{8}}$.","Three biased coins are flipped, each showing heads with probability 0.6 and tails with probability 0.4, independently. What is the probability of obtaining at least 2 heads?","To find the probability of obtaining at least 2 heads, we can find the probabilities of obtaining 2 heads and 3 heads and then add them together.
+
+1. Probability of obtaining 2 heads:
+There are 3 ways to obtain 2 heads: HHT, HTH, and THH. Each of these outcomes has a probability of 0.6 * 0.6 * 0.4 = 0.144. Since there are 3 such outcomes, the total probability of obtaining 2 heads is 3 * 0.144 = 0.432.
+
+2. Probability of obtaining 3 heads:
+There is only 1 way to obtain 3 heads: HHH. This outcome has a probability of 0.6 * 0.6 * 0.6 = 0.216.
+
+Adding the probabilities of obtaining 2 heads and 3 heads, we get the total probability of obtaining at least 2 heads: 0.432 + 0.216 = 0.648.
+
+So, the probability of obtaining at least 2 heads is 0.648.",2,3,5,"{""correctness"": ""The variant answer is fully correct. For exactly 2 heads: C(3,2) × (0.6)² × (0.4)¹ = 3 × 0.36 × 0.4 = 0.432. For exactly 3 heads: C(3,3) × (0.6)³ = 0.216. Total: 0.432 + 0.216 = 0.648. All calculations are accurate."", ""reasoning_quality"": ""The reasoning is clear, well-structured, and conceptually grounded. The response correctly identifies the two cases needed (2 heads and 3 heads), enumerates the arrangements, applies the correct probability calculations for biased coins, and combines them appropriately. The logic flows naturally and is easy to follow."", ""meta_reasoning"": ""The response demonstrates excellent conceptual transfer from the textbook problem to the variant. It explicitly maps the base concept (counting favorable outcomes using combinations) to the new context with biased coins, correctly adapting the probability calculation from uniform (1/8 per outcome) to weighted probabilities (products of individual coin probabilities). The solver recognizes that the combinatorial structure (3 ways to get exactly 2 heads) remains the same while the probability weighting changes, and correctly handles the 'at least 2' modification by decomposing it into exactly 2 and exactly 3 cases.""}",
+3,DeepSeek-Math-7B,3,18,"Compute the definite integral \int_0^1 x^2 \, dx.","To compute the definite integral $\int_0^1 x^2 \, dx$, we first need to find the antiderivative of the function $x^2$. The antiderivative of $x^2$ is $\frac{1}{3}x^3$.
+
+Now, we apply the Fundamental Theorem of Calculus, which states that the definite integral of a function from $a$ to $b$ is equal to the antiderivative evaluated at $b$ minus the antiderivative evaluated at $a$.
+
+So, we have:
+
+$\int_0^1 x^2 \, dx = \left[\frac{1}{3}x^3\right]_0^1$
+
+Now, we evaluate the antiderivative at the bounds of integration:
+
+$\left[\frac{1}{3}x^3\right]_0^1 = \frac{1}{3}(1)^3 - \frac{1}{3}(0)^3 = \frac{1}{3} - 0 = \frac{1}{3}$
+
+Therefore, the definite integral $\int_0^1 x^2 \, dx$ is $\frac{1}{3}$.","Suppose you already know that \int_0^1 x^2 \, dx = 1/3. Using this or otherwise, compute \int_0^2 4x^2 \, dx without re-integrating from scratch.","We can use the property of linearity of integrals to solve this problem. The linearity of integrals states that for any functions $f(x)$ and $g(x)$ and any constant $c$, we have:
+
+$$\int [f(x) + g(x)] \, dx = \int f(x) \, dx + \int g(x) \, dx$$
+
+and
+
+$$\int c \cdot f(x) \, dx = c \cdot \int f(x) \, dx$$
+
+In this problem, we want to compute $\int_0^2 4x^2 \, dx$. We can rewrite this integral as:
+
+$$\int_0^2 4x^2 \, dx = 4 \int_0^2 x^2 \, dx$$
+
+Now, we can use the given information that $\int_0^1 x^2 \, dx = 1/3$. Since the interval of integration is from 0 to 1, we can rewrite the integral as:
+
+$$\int_0^1 x^2 \, dx = \frac{1}{3}$$
+
+We want to find the integral from 0 to 2, so we need to adjust the interval of integration. We can do this by splitting the integral into two parts:
+
+$$\int_0^2 x^2 \, dx = \int_0^1 x^2 \, dx + \int_1^2 x^2 \, dx$$
+
+We know that $\int_0^1 x^2 \, dx = 1/3$, so we need to find $\int_1^2 x^2 \, dx$. We can use the property of linearity to rewrite this integral as:
+
+$$\int_1^2 x^2 \, dx = \int_0^2 x^2 \, dx - \int_0^1 x^2 \, dx$$
+
+Substituting the known values, we get:
+
+$$\int_1^2 x^2 \, dx = \frac{1}{3} - \frac{1}{3} = 0$$
+
+Now, we can substitute this back into the original integral:
+
+$$\int_0^2 4x^2 \, dx = 4 \int_0^2 x^2 \, dx = 4 \left(\int_0^1 x^2 \, dx + \int_1^2 x^2 \, dx\right) = 4 \left(\frac{1}{3} + 0\right) = \frac{4}{3}$$
+
+So, $\int_0^2 4x^2 \, dx = \frac{4}{3}$.",0,1,1,"{""correctness"": ""The final answer of 4/3 is incorrect. The correct answer is 32/3. The model made a critical error when computing ∫₁² x² dx, incorrectly stating it equals 0. The actual value is (8/3 - 1/3) = 7/3. Therefore ∫₀² x² dx = 1/3 + 7/3 = 8/3, and 4 × 8/3 = 32/3."", ""reasoning_quality"": ""The model correctly identified the linearity property and the idea of splitting the integral, which shows some understanding of the approach. However, the execution contained a fundamental logical error: it wrote ∫₁² x² dx = ∫₀² x² dx - ∫₀¹ x² dx, which is correct, but then substituted unknown values incorrectly, essentially using circular reasoning and arriving at 0."", ""meta_reasoning"": ""The model attempted to use the given information about ∫₀¹ x² dx = 1/3 and recognized the need for linearity and interval splitting. However, it failed to recognize that a substitution u = x/2 could map the [0,2] interval to [0,1], which would be the elegant conceptual shortcut. Instead, it attempted an inefficient approach and executed it incorrectly. The model did not successfully apply the base concept to solve the variant.""}",
+4,DeepSeek-Math-7B,4,19,"A data set consists of the values [1, 2, 3, 4]. Compute the mean of this data set.","The mean of a data set is the sum of all the values divided by the number of values. In this case, the mean is (1 + 2 + 3 + 4) / 4 = 10 / 4 = 2.5.","A data set [1, 2, 3, 4, 10] was entered into software, which reported a mean of 4. However, the value 10 was later discovered to be an erroneous outlier and should be removed. Using the original mean 4, compute the corrected mean of the remaining four data points without recomputing all the sums from scratch.","To compute the corrected mean, we need to find the sum of the remaining four data points and divide it by 4.
+
+The sum of the original data set is 1 + 2 + 3 + 4 + 10 = 20.
+
+Since the mean of the original data set is 4, we can find the sum of the original data set by multiplying the mean by the number of data points: 4 * 5 = 20.
+
+Now, we need to remove the erroneous outlier (10) from the sum. So, we subtract 10 from the sum: 20 - 10 = 10.
+
+The sum of the remaining four data points is 10.
+
+Finally, we divide the sum of the remaining four data points by 4 to find the corrected mean: 10 / 4 = 2.5.
+
+So, the corrected mean of the remaining four data points is 2.5.",2,3,5,"{""correctness"": ""The final answer of 2.5 is fully correct. The model correctly computed the sum from the original mean (4 × 5 = 20), subtracted the outlier (20 - 10 = 10), and divided by the new count (10 / 4 = 2.5)."", ""reasoning_quality"": ""The reasoning is clear, well-structured, and logically presented. Each step is explicitly stated and follows naturally from the previous one. The model demonstrates understanding of the relationship between mean, sum, and count."", ""meta_reasoning"": ""The model explicitly maps the variant problem to the base concept by recognizing that mean × count = sum, then uses this relationship to avoid recomputing sums from scratch. It directly applies the conceptual shortcut requested in the problem (using the original mean to recover the sum, then adjusting). The response explicitly connects the variant to the underlying concept of mean as sum/count.""}",
+5,DeepSeek-Math-7B,5,20,"Let B be the 3×3 diagonal matrix B = diag(2, -1, 3). Find all eigenvalues of B.","To find the eigenvalues of a matrix, we need to solve the characteristic equation det(B - λI) = 0, where λ represents the eigenvalues and I is the identity matrix.
+
+For the given matrix B, the characteristic equation is:
+
+det(B - λI) = det(diag(2 - λ, -1 - λ, 3 - λ))
+
+The determinant of a diagonal matrix is the product of its diagonal elements. So, we have:
+
+(2 - λ)((-1) - λ)(3 - λ) = 0
+
+Expanding the equation, we get:
+
+(2 - λ)((-1) - λ)(3 - λ) = (2 - λ)(3 - λ) - (2 - λ)((-1) - λ) = 0
+
+Now, we can solve the equation for λ:
+
+(2 - λ)(3 - λ) - (2 - λ)((-1) - λ) = 0
+6 - 5λ + λ^2 - (2 - λ)^2 = 0
+6 - 5λ + λ^2 - (4 - 4λ + λ^2) = 0
+6 - 5λ + λ^2 - 4 + 4λ - λ^2 = 0
+2 - λ = 0
+λ = 2
+
+So, the only eigenvalue of the matrix B is λ = 2.","Let B be a 3×3 matrix with eigenvalues 2, -1, and 3. Consider the matrix C = A^{-1} + I, where A = B. Without computing any matrix inverses explicitly, find all eigenvalues of C.","Since A = B, we have C = A^{-1} + I = B^{-1} + I.
+
+Let's denote the eigenvalues of B as λ1, λ2, and λ3, which are given as 2, -1, and 3, respectively. Then, the eigenvalues of B^{-1} are 1/λ1, 1/λ2, and 1/λ3, which are 1/2, -1, and 1/3, respectively.
+
+Now, let's find the eigenvalues of C = B^{-1} + I. We can see that the eigenvalues of I are all 1. Therefore, the eigenvalues of C are the sum of the eigenvalues of B^{-1} and I, which are (1/2 + 1), (-1 + 1), and (1/3 + 1), respectively.
+
+Simplifying these expressions, we get the eigenvalues of C as 1.5, 0, and 1.333 (or 4/3).
+
+So, the eigenvalues of C are 1.5, 0, and 4/3.",2,3,5,"{""correctness"": ""The variant response correctly identifies the eigenvalues of C = B^{-1} + I as 3/2 (1.5), 0, and 4/3. The reasoning that eigenvalues of B^{-1} are reciprocals of eigenvalues of B (giving 1/2, -1, 1/3), and that adding I shifts each eigenvalue by 1, is mathematically correct. The final answers 3/2, 0, and 4/3 are all correct."", ""reasoning_quality"": ""The response demonstrates clear, structured reasoning. It correctly applies the spectral mapping theorem: (1) eigenvalues of B^{-1} are reciprocals of eigenvalues of B, and (2) eigenvalues of B^{-1} + I are eigenvalues of B^{-1} plus 1. The explanation is coherent and well-organized, showing conceptual understanding rather than brute-force computation."", ""meta_reasoning"": ""The variant response explicitly maps the problem to base concepts about eigenvalue transformations. It recognizes that for matrix functions f(B), the eigenvalues are f(λ) applied to each eigenvalue λ of B. The solver correctly applies this to both the inverse operation (λ → 1/λ) and the addition of identity (λ → λ + 1), demonstrating strong conceptual transfer. This is a clear example of explicitly mapping the variant to the underlying eigenvalue theory, avoiding any explicit matrix computation as requested.""}",
+6,DeepSeek-Math-7B,6,21,Solve the differential equation y' + 2y = 0 for y(t). Give the general solution.,"To solve the given differential equation y' + 2y = 0, we first recognize that it is a first-order linear homogeneous differential equation. The general form of such an equation is y' + ay = 0, where a is a constant.
+
+In our case, a = 2. We can solve this equation using the integrating factor method. The integrating factor is given by the exponential of the integral of the coefficient a with respect to the independent variable t. In this case, the integrating factor is e^(∫2 dt) = e^(2t).
+
+Now, we multiply the entire differential equation by the integrating factor e^(2t):
+
+e^(2t)y' + 2e^(2t)y = 0
+
+The left-hand side of this equation is now the derivative of the product of y and the integrating factor:
+
+d/dt (ye^(2t)) = 0
+
+Integrating both sides with respect to t, we get:
+
+ye^(2t) = C, where C is the constant of integration.
+
+Finally, we solve for y:
+
+y(t) = Ce^(-2t)
+
+This is the general solution to the given differential equation.",Consider the homogeneous differential equation y' + 2y = 0 with general solution y(t) = C e^{-2t}. Now consider the nonhomogeneous equation z' + 2z = 6 with initial condition z(0) = 0. Use the structure of the homogeneous solution or an integrating factor to find z(t).,"To solve the nonhomogeneous differential equation z' + 2z = 6, we can use the integrating factor method. The integrating factor is given by e^(∫2 dt) = e^(2t). Multiply both sides of the equation by the integrating factor:
+
+e^(2t)z' + 2e^(2t)z = 6e^(2t)
+
+Now, the left side of the equation is the derivative of the product of z(t) and the integrating factor:
+
+d/dt (z(t)e^(2t)) = 6e^(2t)
+
+Integrate both sides with respect to t:
+
+∫d/dt (z(t)e^(2t)) dt = ∫6e^(2t) dt
+
+z(t)e^(2t) = 3e^(2t) + C
+
+Now, solve for z(t):
+
+z(t) = 3 + Ce^(-2t)
+
+To find the constant C, we use the initial condition z(0) = 0:
+
+0 = 3 + Ce^(-2*0)
+0 = 3 + C
+C = -3
+
+So, the particular solution is:
+
+z(t) = 3 - 3e^(-2t)",2,3,5,"{""correctness"": ""The final answer z(t) = 3 - 3e^(-2t) is fully correct. The integrating factor method is applied correctly, the integration of 6e^(2t) yields 3e^(2t), and the initial condition z(0) = 0 is properly used to find C = -3."", ""reasoning_quality"": ""The solution is clear, well-structured, and conceptually grounded. Each step is logically presented: identifying the integrating factor, multiplying through, recognizing the product rule form, integrating, and applying the initial condition. The reasoning flows naturally and is easy to follow."", ""meta_reasoning"": ""The variant response explicitly maps the nonhomogeneous problem to the base concept from the textbook problem. The solver recognizes that the same integrating factor e^(2t) applies (directly leveraging the structure of the homogeneous solution as suggested in the problem), and efficiently extends the method to handle the nonhomogeneous term. The connection between the homogeneous solution Ce^(-2t) appearing in the general solution z(t) = 3 + Ce^(-2t) demonstrates clear conceptual understanding of how particular and homogeneous solutions combine.""}",
+7,DeepSeek-Math-7B,7,22,Let X be the number of heads obtained when 3 fair coins are flipped. What is P(X \ge 1)?,"To find the probability of getting at least one head when flipping 3 fair coins, we can use the complementary probability rule. This rule states that the probability of an event occurring is equal to 1 minus the probability of the event not occurring.
+
+In this case, the event not occurring is getting no heads, which is the same as getting all tails. Since each coin has 2 possible outcomes (heads or tails), and there are 3 coins, there are 2^3 = 8 possible outcomes in total.
+
+There is only 1 outcome where all 3 coins land on tails, so the probability of getting all tails is 1/8.
+
+Using the complementary probability rule, we can find the probability of getting at least one head:
+
+P(X \ge 1) = 1 - P(X = 0)
+P(X \ge 1) = 1 - 1/8
+P(X \ge 1) = 7/8
+
+So, the probability of getting at least one head when flipping 3 fair coins is 7/8 or 0.875.","Let X be Binomial(3, 0.5), the number of heads in 3 fair coin flips. Using linearity of expectation instead of enumerating all outcomes, compute E[2X - 1].","To compute E[2X - 1], we can use the linearity of expectation, which states that E[aX + bY] = aE[X] + bE[Y] for any random variables X and Y and constants a and b.
+
+First, we need to find E[X]. Since X is Binomial(3, 0.5), it represents the number of successes (heads) in 3 independent Bernoulli trials with probability of success 0.5. The expected value of a Binomial random variable is given by E[X] = n * p, where n is the number of trials and p is the probability of success.
+
+So, E[X] = 3 * 0.5 = 1.5.
+
+Now, we can use linearity of expectation to find E[2X - 1].
+
+E[2X - 1] = E[2X] - E[1] = 2E[X] - 1 = 2(1.5) - 1 = 3 - 1 = 2.
+
+Therefore, E[2X - 1] = 2.",2,3,5,"{""correctness"": ""The variant response correctly computes E[2X - 1] = 2. The expected value of Binomial(3, 0.5) is indeed 1.5, and applying linearity of expectation gives 2(1.5) - 1 = 2. This is fully correct."", ""reasoning_quality"": ""The reasoning is clear, well-structured, and conceptually grounded. The response explicitly states the linearity of expectation principle, correctly identifies the formula for expected value of a binomial distribution (E[X] = np), and applies these concepts step-by-step without unnecessary enumeration."", ""meta_reasoning"": ""The variant response demonstrates excellent conceptual transfer. While the textbook problem used complementary probability for P(X ≥ 1), the variant explicitly required using linearity of expectation for E[2X - 1]. The response directly applies the requested conceptual shortcut (linearity of expectation) rather than enumerating outcomes, and explicitly maps the problem to the base concept by stating the linearity principle and the binomial expectation formula. The solver shows clear understanding that different probability concepts apply to different types of questions about the same distribution.""}",
+8,DeepSeek-Math-7B,8,23,"Compute the definite integral \int_0^{\pi} \sin x \, dx.","To compute the definite integral \int_0^{\pi} \sin x \, dx, we can use the fundamental theorem of calculus, which states that if a function has an antiderivative F(x), then the definite integral of the function from a to b is F(b) - F(a).
+
+The antiderivative of sin(x) is -cos(x), so we have:
+
+\int_0^{\pi} \sin x \, dx = [-cos(x)]_0^{\pi}
+
+Now, we evaluate the antiderivative at the bounds of integration:
+
+[-cos(\pi)] - [-cos(0)] = -(-1) - (-1) = 1 + 1 = 2
+
+So, the definite integral \int_0^{\pi} \sin x \, dx is 2.","You know that \int_0^{\pi} \sin x \, dx = 2. Use this fact to compute \int_0^{\pi} (3 + 2 \sin x) \, dx without doing any trigonometric integration from scratch.","We can split the integral into two parts:
+
+\int_0^{\pi} (3 + 2 \sin x) \, dx = \int_0^{\pi} 3 \, dx + \int_0^{\pi} 2 \sin x \, dx
+
+The first integral is straightforward:
+
+\int_0^{\pi} 3 \, dx = 3x \Big|_0^{\pi} = 3\pi - 3(0) = 3\pi
+
+For the second integral, we know that \int_0^{\pi} \sin x \, dx = 2:
+
+\int_0^{\pi} 2 \sin x \, dx = 2 \int_0^{\pi} \sin x \, dx = 2(2) = 4
+
+So, the original integral is:
+
+\int_0^{\pi} (3 + 2 \sin x) \, dx = 3\pi + 4
+
+Therefore, the answer is $\boxed{3\pi + 4}$.",2,3,5,"{""correctness"": ""The final answer 3π + 4 is fully correct. The integral of 3 over [0,π] is 3π, and using the given fact that ∫sin x dx = 2, the integral of 2sin x is 4. The sum is correctly computed."", ""reasoning_quality"": ""The reasoning is clear, well-structured, and conceptually grounded. The response properly applies linearity of integration to split the integral, handles the constant integral correctly, and appropriately uses the given fact for the trigonometric part."", ""meta_reasoning"": ""The variant response explicitly maps the problem to the base concept by recognizing that the given fact ∫sin x dx = 2 can be directly applied. The solver demonstrates strong conceptual understanding by using linearity of integration (splitting the integral and factoring out constants) and explicitly references the given result rather than recomputing from scratch. This shows clear meta-cognitive awareness of how the variant relates to the textbook problem.""}",
+9,DeepSeek-Math-7B,9,24,"A data set consists of the values [1, 2, 3, 4]. Treating this as a population, compute the population variance.","To compute the population variance, we first need to find the mean of the data set. The mean is the sum of the values divided by the number of values.
+
+Mean = (1 + 2 + 3 + 4) / 4 = 10 / 4 = 2.5
+
+Next, we need to find the squared difference between each value and the mean, and then find the average of these squared differences.
+
+Squared differences: (1 - 2.5)^2 = 2.25, (2 - 2.5)^2 = 0.25, (3 - 2.5)^2 = 0.25, (4 - 2.5)^2 = 2.25
+
+Average of squared differences = (2.25 + 0.25 + 0.25 + 2.25) / 4 = 5 / 4 = 1.25
+
+Therefore, the population variance is 1.25.","A data set consists of the values [1, 2, 3, 4] with population variance 1.25. A new data set is formed by adding 5 to every value, giving [6, 7, 8, 9]. Without recomputing all deviations, determine the population variance of the new data set.","To solve this problem, we need to understand the concept of variance in statistics. The variance of a data set is a measure of how spread out the data is. It is calculated as the average of the squared deviations from the mean.
+
+Given a data set with values [1, 2, 3, 4] and a population variance of 1.25, we can calculate the mean of the data set as:
+
+Mean = (1 + 2 + 3 + 4) / 4 = 10 / 4 = 2.5
+
+Now, let's consider the new data set formed by adding 5 to every value, giving [6, 7, 8, 9]. The mean of this new data set is:
+
+Mean = (6 + 7 + 8 + 9) / 4 = 30 / 4 = 7.5
+
+Notice that the mean of the new data set is 5 more than the mean of the original data set. This is because we added 5 to every value in the original data set.
+
+Now, let's calculate the population variance of the new data set. Since we are adding a constant value (5) to each value in the original data set, the variance of the new data set will be the same as the variance of the original data set. This is because adding a constant value to each value in a data set does not change the spread of the data.
+
+Therefore, the population variance of the new data set is 1.25.",2,3,5,"{""correctness"": ""The answer of 1.25 is fully correct. Adding a constant to every value in a data set shifts the mean by the same constant but does not change the variance, since the deviations from the mean remain identical."", ""reasoning_quality"": ""The reasoning is clear, well-structured, and conceptually grounded. The response correctly explains why the mean shifts by 5, and explicitly articulates the key principle that adding a constant does not affect variance because it doesn't change the spread of the data."", ""meta_reasoning"": ""The variant response demonstrates excellent meta-reasoning by explicitly mapping the variant problem to the underlying concept (variance invariance under translation). Rather than recomputing all deviations, the solver recognizes and applies the conceptual shortcut that adding a constant preserves variance. The explanation explicitly connects the variant to the base concept, earning the maximum score.""}",
+10,DeepSeek-Math-7B,10,25,"Consider the 2×2 matrix R = [[0, -1], [1, 0]], which represents a 90° counterclockwise rotation in the plane. Find all eigenvalues of R.","To find the eigenvalues of the matrix R, we need to solve the characteristic equation det(R - λI) = 0, where λ represents the eigenvalues and I is the identity matrix.
+
+R - λI = [[0 - λ, -1], [1, 0 - λ]]
+
+Now, we compute the determinant:
+
+det(R - λI) = (0 - λ)(0 - λ) - (-1)(1) = λ^2 - 1
+
+Setting the determinant equal to zero, we get:
+
+λ^2 - 1 = 0
+
+This equation can be factored as:
+
+(λ - 1)(λ + 1) = 0
+
+So, the eigenvalues of R are λ = 1 and λ = -1.","The matrix R = [[0, -1], [1, 0]] represents a 90° counterclockwise rotation in the plane and has eigenvalues i and -i. Consider S = R^4. Without multiplying matrices explicitly, determine all eigenvalues of S.","Since R is a 90° counterclockwise rotation, applying R four times is equivalent to a 360° rotation, which brings the matrix back to its original form. Therefore, S = R^4 is equal to the identity matrix.
+
+The eigenvalues of the identity matrix are 1, as the identity matrix scales any vector by a factor of 1. Therefore, the eigenvalues of S are 1, 1, 1, and 1.",1,2,4,"{""correctness"": ""The variant response correctly identifies that R^4 = I (the identity matrix) and that the eigenvalues are 1. However, stating '1, 1, 1, and 1' is incorrect for a 2×2 matrix, which can only have 2 eigenvalues (counting multiplicity). The correct answer is that S has eigenvalue 1 with algebraic multiplicity 2. This is a minor error in presentation."", ""reasoning_quality"": ""The reasoning is mostly coherent. The geometric insight that four 90° rotations equals 360° (identity) is correct and well-explained. The connection to eigenvalues of the identity matrix is appropriate. The error about having four eigenvalues for a 2×2 matrix shows some conceptual confusion about matrix dimensions."", ""meta_reasoning"": ""The variant response demonstrates good conceptual understanding by using the geometric interpretation of rotation matrices rather than explicit matrix multiplication. The solver correctly applies the conceptual shortcut (R^4 = I for 90° rotation) and connects it to eigenvalue properties. This shows application of the base concept to the variant, though the response doesn't explicitly verify using the given eigenvalues i and -i (where i^4 = 1 and (-i)^4 = 1 would confirm the result algebraically).""}",
+11,DeepSeek-Math-7B,11,26,Solve the initial value problem y' = 3x^2 with y(0) = 1. Find y(x).,"To solve the initial value problem y' = 3x^2 with y(0) = 1, we need to find the antiderivative of the given function and then apply the initial condition to find the constant of integration.
+
+The antiderivative of y'(x) = 3x^2 is y(x) = x^3 + C, where C is the constant of integration.
+
+Now, we apply the initial condition y(0) = 1:
+
+1 = (0)^3 + C
+1 = C
+
+So, the particular solution to the initial value problem is y(x) = x^3 + 1.",The function y(x) = x^3 + 1 solves the initial value problem y' = 3x^2 with y(0) = 1. Now consider the differential equation y' = 3(x - 2)^2 with initial condition y(2) = 5. Use a substitution or analogy with the previous solution to find y(x).,"To solve the differential equation y' = 3(x - 2)^2 with the initial condition y(2) = 5, we can use a substitution to make the equation look similar to the previous one.
+
+Let u = x - 2, then x = u + 2.
+
+Now, we can rewrite the differential equation in terms of u:
+
+y'(u) = 3u^2,
+
+and the initial condition becomes y(0) = 5.
+
+This is the same differential equation as the previous one, so we can use the previous solution y(x) = x^3 + 1 and substitute u back in:
+
+y(u) = (u + 2)^3 + 1.
+
+Now, we can substitute x back in:
+
+y(x) = (x - 2 + 2)^3 + 1 = x^3 + 1.
+
+So, the solution to the differential equation y' = 3(x - 2)^2 with the initial condition y(2) = 5 is y(x) = x^3 + 1.",0,1,2,"{""correctness"": ""The final answer y(x) = x^3 + 1 is incorrect. The correct solution is y(x) = (x-2)^3 + 5. The model made errors in the substitution process: after finding y(u) = u^3 + C and applying y(0) = 5 to get C = 5, the back-substitution should give y(x) = (x-2)^3 + 5. The model incorrectly wrote y(u) = (u+2)^3 + 1 instead of y(u) = u^3 + 5."", ""reasoning_quality"": ""The approach of using substitution u = x - 2 was correct and appropriate. However, the execution was flawed with algebraic errors in applying the initial condition and performing the back-substitution. The reasoning structure was present but the implementation was incorrect."", ""meta_reasoning"": ""The model correctly identified that substitution could be used to map the variant to the base problem structure, showing some conceptual understanding. However, the execution failed to properly apply the analogy. The model attempted the conceptual shortcut but made errors that show incomplete understanding of how the substitution affects both the differential equation and the initial condition. It did not successfully map the variant to the base concept.""}",
+12,DeepSeek-Math-7B,12,27,A fair six-sided die is rolled once. Let X be the outcome. Compute E[X].,"To compute the expected value E[X] of a random variable X, we need to know the possible outcomes and their probabilities. In this case, the possible outcomes are the numbers from 1 to 6, and each outcome has a probability of 1/6.
+
+The expected value E[X] is calculated as the sum of the product of each outcome and its probability. In this case, the expected value is:
+
+E[X] = 1*(1/6) + 2*(1/6) + 3*(1/6) + 4*(1/6) + 5*(1/6) + 6*(1/6)
+
+E[X] = (1/6) + (2/6) + (3/6) + (4/6) + (5/6) + (6/6)
+
+E[X] = 21/6
+
+E[X] = 3.5
+
+So, the expected value E[X] of rolling a fair six-sided die once is 3.5.","Let X be the outcome of a fair six-sided die, so E[X] = 3.5. Define Y = 7 - X. Without recomputing from the distribution, use linearity of expectation or symmetry to compute E[Y].","To compute E[Y], we can use the linearity of expectation, which states that E[Y] = E[7 - X]. 
+
+Since E[X] = 3.5, we can substitute this into the equation:
+
+E[Y] = E[7 - X] = 7 - E[X] = 7 - 3.5 = 3.5
+
+So, E[Y] = 3.5.",2,3,5,"{""correctness"": ""The answer E[Y] = 3.5 is fully correct. Using linearity of expectation, E[7-X] = 7 - E[X] = 7 - 3.5 = 3.5."", ""reasoning_quality"": ""The reasoning is clear, structured, and conceptually grounded. The response correctly identifies linearity of expectation as the appropriate tool, states the property explicitly, and applies it correctly in a concise manner."", ""meta_reasoning"": ""The response explicitly maps the variant problem to the base concept of linearity of expectation. It directly applies the conceptual shortcut as requested (avoiding recomputation from the distribution) and clearly shows how E[aX + b] = aE[X] + b applies to this specific case. This demonstrates strong conceptual transfer from the textbook problem to the variant.""}",
+13,DeepSeek-Math-7B,13,28,"Compute the definite integral \int_0^1 (2x + 1) \, dx.","To compute the definite integral \int_0^1 (2x + 1) \, dx, we can use the property of linearity of integrals, which states that the integral of a sum is equal to the sum of the integrals. So, we can split the integral into two parts:
+
+\int_0^1 (2x + 1) \, dx = \int_0^1 2x \, dx + \int_0^1 1 \, dx
+
+Now, we can compute each integral separately:
+
+\int_0^1 2x \, dx = 2 \int_0^1 x \, dx = 2 \left[\frac{1}{2}x^2\right]_0^1 = 2 \cdot \frac{1}{2} = 1
+
+\int_0^1 1 \, dx = \int_0^1 dx = [x]_0^1 = 1 - 0 = 1
+
+So, the original integral is equal to the sum of these two integrals:
+
+\int_0^1 (2x + 1) \, dx = 1 + 1 = 2
+
+Therefore, the answer is $\boxed{2}$.","Let F(x) = \int_0^x (2t + 1) \, dt. Using properties of antiderivatives and the Fundamental Theorem of Calculus, compute F(1) without performing a full integral from scratch if possible.","To compute F(1), we can use the Fundamental Theorem of Calculus, which states that if F(x) is an antiderivative of f(x), then \int_a^b f(x) \, dx = F(b) - F(a).
+
+In this case, f(x) = 2x + 1, and we want to find F(1). We can find an antiderivative of f(x) by integrating:
+
+F(x) = \int (2x + 1) \, dx = x^2 + x + C,
+
+where C is the constant of integration. Since we are given F(x), we can assume that C = 0.
+
+Now, we can use the Fundamental Theorem of Calculus to find F(1):
+
+F(1) = (1^2 + 1) - F(0) = (1 + 1) - 0 = 2.
+
+So, F(1) = 2.",2,2,4,"{""correctness"": ""The final answer F(1) = 2 is correct. The computation properly identifies the antiderivative as x² + x and evaluates it at the bounds to get (1 + 1) - (0 + 0) = 2."", ""reasoning_quality"": ""The reasoning is mostly coherent and follows a logical structure. The response correctly invokes the Fundamental Theorem of Calculus and finds the antiderivative. However, there's a slight conceptual confusion: the response says 'we can assume C = 0' when in fact for a definite integral starting at 0, F(0) = 0 by definition of F(x), making the constant irrelevant. The notation is also slightly muddled between F(x) as the given function and F(x) as the antiderivative."", ""meta_reasoning"": ""The variant response demonstrates good conceptual understanding by recognizing that F(1) = ∫₀¹(2t+1)dt is the same computation as the textbook problem, and applies the Fundamental Theorem of Calculus appropriately. The solver uses the antiderivative approach as a conceptual shortcut rather than re-deriving everything from scratch. However, it doesn't explicitly map the variant back to the textbook problem or articulate that F(1) is precisely the same integral computed in the textbook. The approach is efficient but lacks explicit meta-level connection.""}",
+14,DeepSeek-Math-7B,14,29,"A data set consists of the values [1, 3, 3, 6, 7, 8, 9]. Compute the median of this data set.","To compute the median of a data set, we first need to arrange the data in ascending order, which is already done in this case. Then, we find the middle value of the data set. If the data set has an odd number of values, the median is the middle value. If the data set has an even number of values, the median is the average of the two middle values.
+
+In this case, the data set has 7 values, which is an odd number. So, the median is the middle value. The middle value of a data set with 7 values is the 4th value when the data is arranged in ascending order.
+
+The 4th value in the data set [1, 3, 3, 6, 7, 8, 9] is 6.
+
+So, the median of this data set is 6.","A data set consists of the values [1, 3, 3, 6, 7, 8, 9] with median 6. A new data set is formed by duplicating each value, so each of the seven numbers now appears twice. Without listing all 14 values explicitly, determine the median of the new data set.","The original data set has 7 values, so the median is the 4th value when the values are arranged in ascending order. The 4th value in the original data set is 6, so the median of the original data set is 6.
+
+When each value is duplicated, the median remains the same. This is because the median is the middle value of the data set, and duplicating a value does not change the position of the middle value.
+
+Therefore, the median of the new data set is also 6.",2,2,4,"{""correctness"": ""The answer is correct. When each of the 7 values is duplicated, we get 14 values. The median of 14 values is the average of the 7th and 8th values. Since the original 4th value (6) becomes both the 7th and 8th values in the duplicated set, the median is (6+6)/2 = 6."", ""reasoning_quality"": ""The reasoning is mostly coherent and arrives at the correct answer, but the explanation is somewhat imprecise. The statement 'duplicating a value does not change the position of the middle value' is not quite accurate - the position does change (from 4th to 7th-8th), but the value at that position remains the same. A more rigorous explanation would note that with 14 values, we need the average of positions 7 and 8, and both of these positions contain the duplicated original median value."", ""meta_reasoning"": ""The response demonstrates good conceptual understanding by recognizing that duplication preserves the median without needing to list all 14 values. This shows application of a conceptual shortcut - understanding that symmetric duplication of all values maintains the relative ordering and central tendency. However, it doesn't explicitly map the variant to the base concept by explaining precisely why (e.g., that the original median value, being in position 4, becomes positions 7 and 8 after duplication, which are exactly the middle positions for n=14).""}",

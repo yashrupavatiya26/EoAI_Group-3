@@ -1,0 +1,653 @@
+pair_id,model,textbook_id,variant_id,textbook_problem,textbook_response,variant_problem,variant_response,judge_correctness,judge_reasoning_quality,judge_meta_reasoning,judge_justification_json,judge_error
+0,Microsoft-Phi-3.5,0,15,"Let A be the 2×2 matrix A = [[2, 1], [1, 2]]. Find all eigenvalues of A.","To find the eigenvalues of a matrix A, we need to solve the characteristic equation given by det(A - λI) = 0, where λ represents the eigenvalues and I is the identity matrix.
+
+For the given matrix A = [[2, 1], [1, 2]], the identity matrix I is [[1, 0], [0, 1]]. Now, we need to find the determinant of (A - λI):
+
+A - λI = [[2 - λ, 1], [1, 2 - λ]]
+
+Now, let's find the determinant:
+
+det(A - λI) = (2 - λ)(2 - λ) - (1)(1)
+
+Expanding and simplifying the expression:
+
+= λ^2 - 4λ + 4 - 1
+= λ^2 - 4λ + 3
+
+Now, we need to find the roots of the quadratic equation:
+
+λ^2 - 4λ + 3 = 0
+
+We can factor this equation:
+
+(λ - 3)(λ - 1) = 0
+
+Setting each factor equal to zero, we get the eigenvalues:
+
+λ - 3 = 0 => λ = 3
+λ - 1 = 0 => λ = 1
+
+So, the eigenvalues of matrix A are λ = 1 and λ = 3.","Let A be the 2×2 matrix A = [[2, 1], [1, 2]] with eigenvalues 1 and 3. Without computing A^2 explicitly, find all eigenvalues of the matrix B = A^2 + 3I.","To find the eigenvalues of the matrix B = A^2 + 3I, we can use the properties of eigenvalues and matrix addition.
+
+Let λ be an eigenvalue of A with the corresponding eigenvector x. Then, we have:
+
+A * x = λ * x
+
+Now, let's consider the matrix B = A^2 + 3I. We want to find the eigenvalues of B, so we need to find the eigenvalues of A^2 and 3I separately and then add them together.
+
+First, let's find the eigenvalues of A^2. Since A has eigenvalues 1 and 3, we can find the eigenvalues of A^2 by squaring these eigenvalues:
+
+(1)^2 = 1
+(3)^2 = 9
+
+So, the eigenvalues of A^2 are 1 and 9.
+
+Now, let's find the eigenvalues of 3I. Since I is the identity matrix, its eigenvalues are all 1. Multiplying the identity matrix by 3, we get:
+
+3I * x = 3 * x
+
+So, the eigenvalues of 3I are all 3.
+
+Now, we can find the eigenvalues of B by adding the eigenvalues of A^2 and 3I:
+
+1 + 3 = 4
+9 + 3 = 12
+
+Therefore, the eigenvalues of the matrix B = A^2 + 3I are 4 and 12.",2,3,5,"{""correctness"": ""The final answer is correct: the eigenvalues of B = A^2 + 3I are 4 and 12. This follows from the fact that if λ is an eigenvalue of A, then λ^2 + 3 is an eigenvalue of A^2 + 3I, giving 1^2 + 3 = 4 and 3^2 + 3 = 12."", ""reasoning_quality"": ""The reasoning is clear, well-structured, and conceptually grounded. The response correctly identifies that eigenvalues of A^2 are squares of eigenvalues of A, and that adding 3I shifts all eigenvalues by 3. The explanation proceeds logically from the eigenvalue definition through to the final answer."", ""meta_reasoning"": ""The response explicitly maps the variant problem to the base concept of eigenvalue properties. It recognizes that the given eigenvalues from the textbook problem (1 and 3) can be directly used without recomputation, and applies the conceptual shortcut that eigenvalues transform predictably under polynomial operations on matrices. The response explicitly connects the variant to the base eigenvalue concept by starting from Ax = λx and showing how this extends to A^2 + 3I.""}",
+1,Microsoft-Phi-3.5,1,16,Solve the differential equation y'' + 4y' + 4y = 0 for y(t). Give the general solution.,"To solve the differential equation y'' + 4y' + 4y = 0, we first find the characteristic equation by replacing y'' with r^2, y' with r, and y with 1:
+
+r^2 + 4r + 4 = 0
+
+Now, we need to factor this quadratic equation:
+
+(r + 2)(r + 2) = 0
+
+This gives us a repeated root:
+
+r = -2
+
+Since we have a repeated root, the general solution for the differential equation is given by:
+
+y(t) = C1 * e^(-2t) + C2 * t * e^(-2t)
+
+where C1 and C2 are arbitrary constants.","Consider the differential equation y'' + 4y' + 4y = 0. (a) Classify the damping behavior (overdamped, critically damped, or underdamped). (b) Find the unique solution satisfying y(0) = 1 and y'(0) = 0.","(a) To classify the damping behavior, we first need to find the characteristic equation of the given differential equation. The characteristic equation is obtained by replacing y'' with r^2, y' with r, and y with 1:
+
+r^2 + 4r + 4 = 0
+
+Now, we need to find the roots of this quadratic equation. We can factor it as:
+
+(r + 2)(r + 2) = 0
+
+The roots are r = -2 (with multiplicity 2).
+
+Since we have a repeated root, the damping behavior is critically damped.
+
+(b) For a critically damped system, the general solution of the differential equation is given by:
+
+y(t) = (A + Bt)e^(-2t)
+
+We are given the initial conditions y(0) = 1 and y'(0) = 0. Let's use these to find the constants A and B.
+
+Using y(0) = 1:
+
+1 = (A + B(0))e^(-2(0))
+1 = A
+
+Now, let's find the derivative of y(t):
+
+y'(t) = B*e^(-2t) - 2(A + Bt)e^(-2t)
+
+Using y'(0) = 0:
+
+0 = B*e^(-2(0)) - 2(A + B(0))e^(-2(0))
+0 = B - 2A
+
+Since we already found that A = 1, we can solve for B:
+
+0 = B - 2(1)
+B = 2
+
+So, the unique solution satisfying the given initial conditions is:
+
+y(t) = (1 + 2t)e^(-2t)",2,3,5,"{""correctness"": ""The variant response is fully correct. Part (a) correctly identifies the system as critically damped based on the repeated root r = -2. Part (b) correctly derives the particular solution y(t) = (1 + 2t)e^(-2t) by properly applying initial conditions y(0) = 1 and y'(0) = 0. The derivative calculation and algebraic steps are all accurate."", ""reasoning_quality"": ""The reasoning is clear, well-structured, and conceptually grounded. The response systematically addresses each part: finding the characteristic equation, factoring to identify the repeated root, classifying the damping behavior based on root type, writing the general solution form for critically damped systems, and methodically applying initial conditions to find specific constants."", ""meta_reasoning"": ""The response explicitly maps the variant problem to the base concept from the textbook. It recognizes that the repeated root (discriminant = 0) corresponds to critical damping, demonstrating clear conceptual understanding of the relationship between characteristic equation roots and damping classification. The solution efficiently applies the general solution form from the textbook case to solve the initial value problem, showing strong transfer of the underlying concept to the extended problem context.""}",
+2,Microsoft-Phi-3.5,2,17,Three fair coins are flipped. What is the probability of getting exactly 2 heads?,"To solve this problem, we can use the concept of combinations and the basic probability formula:
+
+Probability = (Number of favorable outcomes) / (Total number of possible outcomes)
+
+Step 1: Determine the total number of possible outcomes
+
+When flipping three fair coins, each coin has two possible outcomes: heads (H) or tails (T). Since there are three coins, the total number of possible outcomes is 2^3 = 8. These outcomes can be listed as follows:
+
+1. HHH
+2. HHT
+3. HTH
+4. HTT
+5. THH
+6. THT
+7. TTH
+8. TTT
+
+Step 2: Determine the number of favorable outcomes
+
+We are interested in the outcomes with exactly 2 heads. There are three such outcomes:
+
+1. HHT
+2. HTH
+3. THH
+
+So, there are 3 favorable outcomes.
+
+Step 3: Calculate the probability
+
+Now, we can use the probability formula:
+
+Probability = (Number of favorable outcomes) / (Total number of possible outcomes)
+Probability = 3 / 8
+
+The probability of getting exactly 2 heads when flipping three fair coins is 3/8 or 0.375.","Three biased coins are flipped, each showing heads with probability 0.6 and tails with probability 0.4, independently. What is the probability of obtaining at least 2 heads?","To find the probability of obtaining at least 2 heads, we can find the probability of obtaining exactly 2 heads and the probability of obtaining exactly 3 heads, and then add them together.
+
+The probability of obtaining exactly 2 heads can be found using the binomial probability formula:
+
+P(X = k) = C(n, k) * p^k * (1-p)^(n-k)
+
+where n is the number of trials (in this case, 3 coin flips), k is the number of successful outcomes (in this case, 2 heads), p is the probability of success (in this case, 0.6 for heads), and C(n, k) is the number of combinations of n items taken k at a time.
+
+For exactly 2 heads:
+
+P(X = 2) = C(3, 2) * 0.6^2 * 0.4^1
+P(X = 2) = 3 * 0.36 * 0.4
+P(X = 2) = 0.432
+
+The probability of obtaining exactly 3 heads is:
+
+P(X = 3) = C(3, 3) * 0.6^3 * 0.4^0
+P(X = 3) = 1 * 0.216 * 1
+P(X = 3) = 0.216
+
+Now, we add the probabilities of obtaining exactly 2 heads and exactly 3 heads:
+
+P(at least 2 heads) = P(X = 2) + P(X = 3)
+P(at least 2 heads) = 0.432 + 0.216
+P(at least 2 heads) = 0.648
+
+So, the probability of obtaining at least 2 heads when flipping the three biased coins is 0.648.",2,3,5,"{""correctness"": ""The variant response correctly calculates P(X=2) = 3 * 0.36 * 0.4 = 0.432 and P(X=3) = 1 * 0.216 = 0.216, giving P(at least 2 heads) = 0.648. All arithmetic is correct and the final answer is accurate."", ""reasoning_quality"": ""The response is clear, well-structured, and conceptually grounded. It explicitly states the binomial probability formula, identifies all relevant parameters (n=3, p=0.6), and systematically computes each component before combining them. The reasoning flows logically from problem setup to final answer."", ""meta_reasoning"": ""The variant response demonstrates excellent conceptual transfer from the textbook problem. While the textbook used enumeration for fair coins, the variant correctly recognizes that biased coins require the binomial distribution framework. The response explicitly maps the variant to the base concept by identifying that 'at least 2 heads' means computing P(X=2) + P(X=3), and correctly applies the generalized formula C(n,k) * p^k * (1-p)^(n-k) rather than simple counting. This shows clear understanding that the combination count (3 ways to get 2 heads) from the textbook problem becomes the C(n,k) term in the weighted probability calculation.""}",
+3,Microsoft-Phi-3.5,3,18,"Compute the definite integral \int_0^1 x^2 \, dx.","To compute the definite integral \(\int_0^1 x^2 \, dx\), we first find the antiderivative of the function \(x^2\).
+
+The antiderivative of \(x^2\) is \(\frac{1}{3}x^3\), since when we differentiate \(\frac{1}{3}x^3\), we get back \(x^2\).
+
+Now, we evaluate the antiderivative at the limits of integration:
+
+\[\left[\frac{1}{3}x^3\right]_0^1 = \frac{1}{3}(1)^3 - \frac{1}{3}(0)^3 = \frac{1}{3} - 0 = \frac{1}{3}\].
+
+So, the value of the definite integral \(\int_0^1 x^2 \, dx\) is \(\frac{1}{3}\).","Suppose you already know that \int_0^1 x^2 \, dx = 1/3. Using this or otherwise, compute \int_0^2 4x^2 \, dx without re-integrating from scratch.","Given that \(\int_0^1 x^2 \, dx = \frac{1}{3}\), we can use the properties of definite integrals to compute \(\int_0^2 4x^2 \, dx\).
+
+First, we can factor out the constant 4 from the integral:
+
+\[\int_0^2 4x^2 \, dx = 4 \int_0^2 x^2 \, dx\]
+
+Now, we can use the given value of the integral from 0 to 1 and apply the property of definite integrals that allows us to multiply the integral by a constant:
+
+\[\int_0^2 x^2 \, dx = 4 \int_0^1 x^2 \, dx\]
+
+Since we know that \(\int_0^1 x^2 \, dx = \frac{1}{3}\), we can substitute this value into the equation:
+
+\[\int_0^2 x^2 \, dx = 4 \cdot \frac{1}{3} = \frac{4}{3}\]
+
+Therefore, \(\int_0^2 4x^2 \, dx = \frac{4}{3}\).",0,1,2,"{""correctness"": ""The correct answer is 32/3. The variant response incorrectly claims that ∫₀² x² dx = 4∫₀¹ x² dx, which is false. The correct relationship uses substitution u=x/2: ∫₀² x² dx = 8∫₀¹ u² du = 8(1/3) = 8/3. Then 4 × 8/3 = 32/3. The response arrives at 4/3, which is incorrect."", ""reasoning_quality"": ""The response shows some structure by factoring out the constant 4 correctly, but then applies a completely incorrect scaling property. The claim that ∫₀² x² dx = 4∫₀¹ x² dx has no mathematical basis and represents a fundamental misunderstanding of how integrals scale with limits of integration."", ""meta_reasoning"": ""The response attempts to use the given information and apply integral properties (constant multiple rule), showing awareness that shortcuts exist. However, the execution fails because the scaling relationship between the integrals is incorrectly derived. The model tried to avoid re-integrating but applied the wrong conceptual framework, demonstrating inefficient/incorrect application rather than proper conceptual mapping.""}",
+4,Microsoft-Phi-3.5,4,19,"A data set consists of the values [1, 2, 3, 4]. Compute the mean of this data set.","To compute the mean (average) of a data set, you sum all the values and then divide by the number of values.
+
+Given data set: [1, 2, 3, 4]
+
+Step 1: Sum all the values
+1 + 2 + 3 + 4 = 10
+
+Step 2: Count the number of values
+There are 4 values in the data set.
+
+Step 3: Divide the sum by the number of values
+Mean = 10 / 4 = 2.5
+
+So, the mean of the data set [1, 2, 3, 4] is 2.5.","A data set [1, 2, 3, 4, 10] was entered into software, which reported a mean of 4. However, the value 10 was later discovered to be an erroneous outlier and should be removed. Using the original mean 4, compute the corrected mean of the remaining four data points without recomputing all the sums from scratch.","To find the corrected mean without recomputing all the sums from scratch, we can use the original mean and the number of data points to adjust for the erroneous outlier.
+
+The original mean of the data set [1, 2, 3, 4, 10] is given as 4. This mean is calculated by summing all the data points and dividing by the number of data points:
+
+Original mean = (1 + 2 + 3 + 4 + 10) / 5 = 20 / 5 = 4
+
+Now, we know that the mean of the remaining four data points after removing the outlier (10) will be less than the original mean of 4 because the outlier is greater than the original mean.
+
+To find the corrected mean, we can use the following relationship:
+
+Corrected sum = Original sum - Outlier
+Corrected mean = Corrected sum / (Number of data points - 1)
+
+We already know the original sum (20) and the outlier (10), so we can calculate the corrected sum:
+
+Corrected sum = 20 - 10 = 10
+
+Now, we have four data points remaining, so we divide the corrected sum by 4:
+
+Corrected mean = 10 / 4 = 2.5
+
+Therefore, the corrected mean of the remaining data points [1, 2, 3, 4] is 2.5.",2,3,5,"{""correctness"": ""The final answer of 2.5 is fully correct. The corrected mean of [1, 2, 3, 4] after removing the outlier 10 is indeed 2.5."", ""reasoning_quality"": ""The reasoning is clear, well-structured, and conceptually grounded. The response correctly identifies the relationship between the original mean, sum, and how to adjust for removing a data point. Each step is logically explained and the mathematical operations are accurate."", ""meta_reasoning"": ""The response explicitly maps the variant problem to the base concept of mean calculation. It demonstrates understanding that mean = sum/count can be rearranged to recover the original sum (Original sum = Original mean × n = 4 × 5 = 20), then applies the conceptual shortcut of subtracting the outlier from the total sum rather than recomputing from scratch. The response explicitly states 'To find the corrected mean without recomputing all the sums from scratch' and uses the relationship 'Corrected sum = Original sum - Outlier', showing clear conceptual transfer from the textbook problem to this variant.""}",
+5,Microsoft-Phi-3.5,5,20,"Let B be the 3×3 diagonal matrix B = diag(2, -1, 3). Find all eigenvalues of B.","To find the eigenvalues of a diagonal matrix, we can directly read them off from the diagonal. The eigenvalues of a diagonal matrix are the elements on its diagonal.
+
+For the given diagonal matrix B = diag(2, -1, 3), the eigenvalues are 2, -1, and 3.
+
+So, the eigenvalues of B are 2, -1, and 3.","Let B be a 3×3 matrix with eigenvalues 2, -1, and 3. Consider the matrix C = A^{-1} + I, where A = B. Without computing any matrix inverses explicitly, find all eigenvalues of C.","Let's denote the eigenvalues of matrix B as λ1 = 2, λ2 = -1, and λ3 = 3. Since A = B, these are also the eigenvalues of A.
+
+Now, let's consider the matrix C = A^{-1} + I. We want to find the eigenvalues of C without explicitly computing any matrix inverses.
+
+Let μ be an eigenvalue of C. Then, for some non-zero vector v, we have:
+
+Cv = μv
+
+Since C = A^{-1} + I, we can write:
+
+(A^{-1} + I)v = μv
+
+Now, let's distribute the vector v:
+
+A^{-1}v + Iv = μv
+
+We know that Iv = v, so we can rewrite the equation as:
+
+A^{-1}v + v = μv
+
+Now, let's isolate A^{-1}v:
+
+A^{-1}v = μv - v
+
+Since μ is an eigenvalue of C, we have:
+
+A^{-1}v = μ(v - Iv)
+
+Now, let's multiply both sides by A:
+
+A(A^{-1}v) = A(μ(v - Iv))
+
+Since A(A^{-1}) = I, we get:
+
+v = μ(Av - AIv)
+
+Now, let's distribute μ:
+
+v = μAv - μ(AIv)
+
+We know that AIv = I(Av) = Av, so we can rewrite the equation as:
+
+v = μAv - μAv
+
+This simplifies to:
+
+v = (μ - μ)Av
+
+Since μ is an eigenvalue of C, we have:
+
+v = 0v
+
+This implies that v must be the zero vector, which contradicts the fact that v is a non-zero vector. Therefore, there is no eigenvalue μ of C that satisfies the equation v = (μ - μ)Av for a non-zero vector v.
+
+Thus, there are no eigenvalues of C. The eigenvalues of C are undefined.",0,0,0,"{""correctness"": ""The answer is completely incorrect. The eigenvalues of C = A^{-1} + I should be 1/λ + 1 for each eigenvalue λ of A. Given eigenvalues 2, -1, 3 of A, the eigenvalues of C should be 1/2 + 1 = 3/2, 1/(-1) + 1 = 0, and 1/3 + 1 = 4/3. The claim that C has no eigenvalues is false."", ""reasoning_quality"": ""The reasoning is incoherent and contains fundamental algebraic errors. The manipulation from A^{-1}v = μv - v leads to nonsensical steps, including the erroneous conclusion that v = (μ - μ)Av = 0v. The algebra is garbled and the logical chain breaks down completely, leading to an absurd conclusion that a 3×3 matrix has no eigenvalues."", ""meta_reasoning"": ""The response completely fails to apply the key conceptual insight: if v is an eigenvector of A with eigenvalue λ, then v is also an eigenvector of A^{-1} with eigenvalue 1/λ, and an eigenvector of A^{-1} + I with eigenvalue 1/λ + 1. This is the direct conceptual extension from the textbook problem about eigenvalues of diagonal matrices. The variant response shows no recognition of this spectral mapping principle and instead produces confused, incorrect algebra.""}",
+6,Microsoft-Phi-3.5,6,21,Solve the differential equation y' + 2y = 0 for y(t). Give the general solution.,"To solve the differential equation y' + 2y = 0, we can use the method of separation of variables. 
+
+First, rewrite the equation as:
+
+y' = -2y
+
+Now, separate the variables by dividing both sides by y and multiplying both sides by dt:
+
+(dy/y) = -2 dt
+
+Next, integrate both sides:
+
+∫(dy/y) = ∫(-2 dt)
+
+The integral of (dy/y) is ln|y|, and the integral of -2 dt is -2t. So, we have:
+
+ln|y| = -2t + C₁
+
+To solve for y, we can exponentiate both sides:
+
+e^(ln|y|) = e^(-2t + C₁)
+
+Since e^(ln|y|) = |y| and e^(C₁) = C₂ (where C₂ is a constant), we have:
+
+|y| = C₂ * e^(-2t)
+
+Now, we can remove the absolute value by introducing a new constant, C₃, which can be positive or negative:
+
+y = ±C₃ * e^(-2t)
+
+So, the general solution to the differential equation y' + 2y = 0 is:
+
+y(t) = C₃ * e^(-2t)
+
+where C₃ is an arbitrary constant.",Consider the homogeneous differential equation y' + 2y = 0 with general solution y(t) = C e^{-2t}. Now consider the nonhomogeneous equation z' + 2z = 6 with initial condition z(0) = 0. Use the structure of the homogeneous solution or an integrating factor to find z(t).,"To solve the nonhomogeneous differential equation z' + 2z = 6 with the initial condition z(0) = 0, we can use the method of undetermined coefficients. This method involves finding a particular solution to the nonhomogeneous equation and then adding it to the general solution of the homogeneous equation.
+
+First, let's find the general solution to the homogeneous equation z' + 2z = 0. The general solution to this equation is of the form:
+
+z_h(t) = C e^{-2t}
+
+where C is an arbitrary constant.
+
+Now, let's find a particular solution to the nonhomogeneous equation z' + 2z = 6. Since the nonhomogeneous term is a constant, we can assume a particular solution of the form:
+
+z_p(t) = A
+
+where A is a constant. Now, let's find the derivative of z_p(t):
+
+z_p'(t) = 0
+
+Now, substitute z_p(t) and z_p'(t) into the nonhomogeneous equation:
+
+0 + 2A = 6
+
+Solving for A, we get:
+
+A = 3
+
+So, the particular solution is:
+
+z_p(t) = 3
+
+Now, the general solution to the nonhomogeneous equation is the sum of the general solution to the homogeneous equation and the particular solution:
+
+z(t) = z_h(t) + z_p(t) = C e^{-2t} + 3
+
+To find the value of C, we use the initial condition z(0) = 0:
+
+0 = C e^{-2(0)} + 3
+0 = C + 3
+
+Solving for C, we get:
+
+C = -3
+
+So, the solution to the nonhomogeneous differential equation with the given initial condition is:
+
+z(t) = -3 e^{-2t} + 3
+
+This is the particular solution that satisfies the initial condition z(0) = 0.",2,3,5,"{""correctness"": ""The final answer z(t) = -3e^{-2t} + 3 is fully correct. Verification: z'(t) = 6e^{-2t}, and z' + 2z = 6e^{-2t} + 2(-3e^{-2t} + 3) = 6e^{-2t} - 6e^{-2t} + 6 = 6. Also z(0) = -3 + 3 = 0. Both the differential equation and initial condition are satisfied."", ""reasoning_quality"": ""The solution is clear, well-structured, and conceptually grounded. The response correctly identifies the method (undetermined coefficients), systematically finds the homogeneous solution, determines the particular solution by assuming a constant form, combines them for the general solution, and applies the initial condition. Each step is logically explained."", ""meta_reasoning"": ""The variant response explicitly maps the variant problem to the base concept from the textbook. It directly uses the homogeneous solution structure y(t) = Ce^{-2t} from the textbook problem as z_h(t), then builds upon it to solve the nonhomogeneous equation. The response demonstrates clear conceptual transfer by recognizing that the nonhomogeneous solution is constructed from the homogeneous solution plus a particular solution. This shows explicit mapping of the variant to the base concept.""}",
+7,Microsoft-Phi-3.5,7,22,Let X be the number of heads obtained when 3 fair coins are flipped. What is P(X \ge 1)?,"To solve this problem, we need to find the probability of getting at least one head when flipping 3 fair coins. We can approach this by first finding the probability of the complementary event (getting no heads) and then subtracting that from 1.
+
+Step 1: Calculate the probability of getting no heads (all tails) when flipping 3 coins.
+
+Since the coins are fair, the probability of getting a tail on a single flip is 1/2. The probability of getting tails on all three flips is the product of the probabilities of getting a tail on each individual flip:
+
+P(all tails) = P(tail on flip 1) * P(tail on flip 2) * P(tail on flip 3)
+P(all tails) = (1/2) * (1/2) * (1/2)
+P(all tails) = 1/8
+
+Step 2: Calculate the probability of getting at least one head.
+
+P(at least one head) = 1 - P(all tails)
+P(at least one head) = 1 - 1/8
+P(at least one head) = 7/8
+
+So, the probability of getting at least one head when flipping 3 fair coins is 7/8.","Let X be Binomial(3, 0.5), the number of heads in 3 fair coin flips. Using linearity of expectation instead of enumerating all outcomes, compute E[2X - 1].","To compute the expected value E[2X - 1], we can use the linearity of expectation, which states that for any random variable X and constants a and b, E[aX + b] = aE[X] + b.
+
+First, we need to find the expected value E[X] of a binomial random variable X with parameters n = 3 and p = 0.5. The expected value of a binomial random variable is given by:
+
+E[X] = n * p
+
+In this case, n = 3 and p = 0.5, so:
+
+E[X] = 3 * 0.5 = 1.5
+
+Now, we can use the linearity of expectation to find E[2X - 1]:
+
+E[2X - 1] = 2E[X] - E[1]
+
+Since E[1] is just 1 (the expected value of a constant is the constant itself), we have:
+
+E[2X - 1] = 2 * 1.5 - 1 = 3 - 1 = 2
+
+So, the expected value E[2X - 1] is 2.",2,3,5,"{""correctness"": ""The variant response correctly computes E[2X - 1] = 2. The expected value of Binomial(3, 0.5) is indeed 1.5, and applying linearity of expectation gives 2(1.5) - 1 = 2. The answer is fully correct."", ""reasoning_quality"": ""The reasoning is clear, well-structured, and conceptually grounded. The response explicitly states the linearity of expectation property, correctly applies the formula for the expected value of a binomial distribution (E[X] = np), and methodically works through the calculation. The explanation of E[1] = 1 shows attention to detail."", ""meta_reasoning"": ""The response demonstrates excellent conceptual transfer. While the textbook problem involved probability calculation using the complement rule, the variant asks about expected value using linearity of expectation - a completely different concept within the same probability framework. The response explicitly identifies and applies the relevant conceptual shortcut (linearity of expectation and the binomial expectation formula) rather than enumerating outcomes, which is exactly what the problem requested. The solver clearly maps the variant to the appropriate base concepts and applies them efficiently.""}",
+8,Microsoft-Phi-3.5,8,23,"Compute the definite integral \int_0^{\pi} \sin x \, dx.","To compute the definite integral \(\int_0^{\pi} \sin x \, dx\), we first find the antiderivative of the function \(\sin x\). The antiderivative of \(\sin x\) is \(-\cos x\).
+
+Now, we evaluate the antiderivative at the upper and lower limits of the integral and subtract the results:
+
+\([- \cos x]_0^{\pi} = -\cos(\pi) - (-\cos(0)) = -(-1) - (-1) = 1 + 1 = 2\).
+
+So, the value of the definite integral \(\int_0^{\pi} \sin x \, dx\) is 2.","You know that \int_0^{\pi} \sin x \, dx = 2. Use this fact to compute \int_0^{\pi} (3 + 2 \sin x) \, dx without doing any trigonometric integration from scratch.","Given that \(\int_0^{\pi} \sin x \, dx = 2\), we can use this fact to compute \(\int_0^{\pi} (3 + 2 \sin x) \, dx\) by breaking it down into two separate integrals and then combining the results.
+
+Step 1: Break down the integral into two parts.
+
+\(\int_0^{\pi} (3 + 2 \sin x) \, dx = \int_0^{\pi} 3 \, dx + \int_0^{\pi} 2 \sin x \, dx\)
+
+Step 2: Compute the first integral.
+
+The integral of a constant is just the constant times the length of the interval. In this case, the constant is 3 and the interval is from 0 to \(\pi\).
+
+\(\int_0^{\pi} 3 \, dx = 3 \int_0^{\pi} 1 \, dx = 3[\pi - 0] = 3\pi\)
+
+Step 3: Compute the second integral using the given fact.
+
+We are given that \(\int_0^{\pi} \sin x \, dx = 2\). So,
+
+\(\int_0^{\pi} 2 \sin x \, dx = 2 \int_0^{\pi} \sin x \, dx = 2 \cdot 2 = 4\)
+
+Step 4: Combine the results.
+
+Now, we add the results of the two integrals:
+
+\(3\pi + 4\)
+
+So, \(\int_0^{\pi} (3 + 2 \sin x) \, dx = 3\pi + 4\).",2,3,5,"{""correctness"": ""The final answer of 3π + 4 is fully correct. The integral of 3 over [0,π] is 3π, and using the given fact that ∫sin x dx = 2, the integral of 2sin x is 4. The sum is correctly computed."", ""reasoning_quality"": ""The solution is clear, well-structured, and logically organized into distinct steps. Each step is properly justified, showing the linearity of integration (splitting the integral and factoring out constants) and the evaluation of the constant integral."", ""meta_reasoning"": ""The response explicitly maps the variant problem to the base concept by directly using the given fact ∫sin x dx = 2 as instructed. The solver demonstrates clear conceptual understanding by applying linearity of integration to decompose the problem, avoiding any trigonometric integration from scratch. The approach explicitly connects the variant to the provided result, earning full marks for meta-reasoning.""}",
+9,Microsoft-Phi-3.5,9,24,"A data set consists of the values [1, 2, 3, 4]. Treating this as a population, compute the population variance.","To compute the population variance, we need to follow these steps:
+
+1. Calculate the mean (average) of the data set.
+2. Subtract the mean from each data point and square the result (to get the squared deviations).
+3. Calculate the average of these squared deviations.
+
+Let's go through these steps with the given data set [1, 2, 3, 4]:
+
+Step 1: Calculate the mean
+Mean = (1 + 2 + 3 + 4) / 4 = 10 / 4 = 2.5
+
+Step 2: Calculate the squared deviations
+(1 - 2.5)^2 = 1.5^2 = 2.25
+(2 - 2.5)^2 = 0.5^2 = 0.25
+(3 - 2.5)^2 = 0.5^2 = 0.25
+(4 - 2.5)^2 = 1.5^2 = 2.25
+
+Step 3: Calculate the average of the squared deviations
+Population variance = (2.25 + 0.25 + 0.25 + 2.25) / 4 = 5 / 4 = 1.25
+
+So, the population variance of the data set [1, 2, 3, 4] is 1.25.","A data set consists of the values [1, 2, 3, 4] with population variance 1.25. A new data set is formed by adding 5 to every value, giving [6, 7, 8, 9]. Without recomputing all deviations, determine the population variance of the new data set.","The population variance is a measure of how spread out the values in a data set are. It is calculated by taking the average of the squared differences from the mean.
+
+Given that the original data set has a variance of 1.25, we can use the properties of variance to find the variance of the new data set without recomputing all deviations.
+
+When you add a constant to every value in the data set, the mean of the data set will increase by that constant, but the spread of the data (variance) will not change. This is because variance is a measure of the spread of the data around the mean, and adding a constant shifts all data points equally, so their relative positions to each other and to the new mean remain the same.
+
+In this case, we are adding 5 to each value in the original data set [1, 2, 3, 4]. The new data set will be [6, 7, 8, 9]. The mean of the original data set is (1+2+3+4)/4 = 2.5. After adding 5 to each value, the new mean will be 2.5 + 5 = 7.5.
+
+Since the variance does not change when adding a constant to each data point, the population variance of the new data set will be the same as the original, which is 1.25.
+
+Therefore, the population variance of the new data set [6, 7, 8, 9] is also 1.25.",2,3,5,"{""correctness"": ""The answer of 1.25 is fully correct. Adding a constant to all values in a data set does not change the variance, as the deviations from the mean remain identical."", ""reasoning_quality"": ""The reasoning is clear, well-structured, and conceptually grounded. The response correctly explains why variance is invariant under translation (adding a constant), noting that all data points shift equally so their relative positions to each other and to the new mean remain unchanged."", ""meta_reasoning"": ""The variant response explicitly maps the problem to the base concept of variance invariance under translation. Rather than recomputing deviations as in the textbook problem, the response directly applies the conceptual shortcut that adding a constant does not affect variance. The explanation explicitly connects the variant to the underlying mathematical property, demonstrating strong meta-reasoning about when and why this shortcut applies.""}",
+10,Microsoft-Phi-3.5,10,25,"Consider the 2×2 matrix R = [[0, -1], [1, 0]], which represents a 90° counterclockwise rotation in the plane. Find all eigenvalues of R.","To find the eigenvalues of the matrix R, we need to solve the characteristic equation, which is given by the determinant of (R - λI), where λ is the eigenvalue and I is the identity matrix.
+
+The matrix R is:
+
+R = [[0, -1],
+     [1,  0]]
+
+The identity matrix I for a 2x2 matrix is:
+
+I = [[1, 0],
+     [0, 1]]
+
+Now, we need to find the matrix (R - λI):
+
+R - λI = [[0 - λ, -1],
+          [1,      0 - λ]]
+
+This simplifies to:
+
+[[-λ, -1],
+ [1, -λ]]
+
+Now, we need to find the determinant of this matrix:
+
+det(-λ, -1, 1, -λ) = (-λ)(-λ) - (-1)(1) = λ^2 + 1
+
+Now, we need to solve the characteristic equation:
+
+λ^2 + 1 = 0
+
+To solve for λ, we can factor the equation as a difference of squares:
+
+(λ - i)(λ + i) = 0
+
+This gives us two eigenvalues:
+
+λ1 = i
+λ2 = -i
+
+So, the eigenvalues of the matrix R are i and -i.","The matrix R = [[0, -1], [1, 0]] represents a 90° counterclockwise rotation in the plane and has eigenvalues i and -i. Consider S = R^4. Without multiplying matrices explicitly, determine all eigenvalues of S.","To find the eigenvalues of S without explicitly multiplying matrices, we can use the properties of eigenvalues and matrix powers.
+
+Given that R is a 90° counterclockwise rotation matrix, its eigenvalues are i and -i. This is because a 90° counterclockwise rotation in the plane is a unitary matrix (since it preserves the length of vectors and its transpose is its inverse), and the eigenvalues of a unitary matrix have absolute value 1.
+
+Now, let's consider the matrix S = R^4. Since R is a rotation matrix, we know that R^2 is a 180° rotation (because 90° * 2 = 180°), which is equivalent to a reflection across the origin in the plane. A reflection matrix has eigenvalues that are either +1 or -1, because it either preserves or inverts the length of vectors.
+
+When we raise R to the fourth power, we are effectively applying the 90° rotation four times, which corresponds to a full 360° rotation. A full 360° rotation brings a vector back to its original position, which means the transformation is the identity transformation. The identity matrix has eigenvalues of +1, as it leaves all vectors unchanged.
+
+Therefore, the eigenvalues of S = R^4 are all +1. There are no other eigenvalues because the only possible eigenvalues for a matrix that represents a full rotation (360°) are +1 and -1, and since we've established that S is the identity matrix, the eigenvalues are all +1.
+
+In summary, the eigenvalues of S are:
+
+\[\lambda_1 = 1\]
+\[\lambda_2 = 1\]
+\[\lambda_3 = 1\]
+\[\lambda_4 = 1\]
+
+All eigenvalues are +1.",1,2,4,"{""correctness"": ""The final answer that the eigenvalues of S = R^4 are both 1 is correct. However, the response incorrectly states there are four eigenvalues (λ1, λ2, λ3, λ4) when S is a 2×2 matrix and thus has exactly two eigenvalues. The correct statement is that both eigenvalues are 1 (with algebraic multiplicity 2). This is a minor error in presentation."", ""reasoning_quality"": ""The reasoning is mostly coherent and uses valid conceptual approaches: recognizing that R^4 represents a 360° rotation (identity transformation), and correctly concluding the eigenvalues are 1. The explanation about unitary matrices and rotation properties is reasonable. However, there's confusion about reflection matrices (R^2 is -I, not a reflection), and the claim about 'four eigenvalues' shows some conceptual sloppiness about matrix dimensions."", ""meta_reasoning"": ""The response successfully applies the conceptual shortcut of using geometric interpretation (four 90° rotations = 360° = identity) rather than computing R^4 explicitly. It also implicitly uses the eigenvalue power property (if λ is an eigenvalue of R, then λ^4 is an eigenvalue of R^4, and i^4 = (-i)^4 = 1). The response explicitly connects the variant to the base concept of rotation matrices and their eigenvalue properties, demonstrating good transfer of conceptual understanding.""}",
+11,Microsoft-Phi-3.5,11,26,Solve the initial value problem y' = 3x^2 with y(0) = 1. Find y(x).,"To solve the initial value problem y' = 3x^2 with y(0) = 1, we need to integrate the given differential equation and then apply the initial condition to find the constant of integration.
+
+Step 1: Integrate the differential equation y' = 3x^2
+
+The integral of 3x^2 with respect to x is:
+
+∫(3x^2) dx = x^3 + C
+
+where C is the constant of integration.
+
+Step 2: Apply the initial condition y(0) = 1
+
+Now we need to find the value of C by plugging in the initial condition into the integrated equation:
+
+y(0) = (0)^3 + C = 1
+
+0 + C = 1
+
+C = 1
+
+Step 3: Write the final solution for y(x)
+
+Now that we have the value of C, we can write the final solution for y(x):
+
+y(x) = x^3 + 1
+
+So, the solution to the initial value problem y' = 3x^2 with y(0) = 1 is y(x) = x^3 + 1.",The function y(x) = x^3 + 1 solves the initial value problem y' = 3x^2 with y(0) = 1. Now consider the differential equation y' = 3(x - 2)^2 with initial condition y(2) = 5. Use a substitution or analogy with the previous solution to find y(x).,"To solve the differential equation y' = 3(x - 2)^2 with the initial condition y(2) = 5, we can use a substitution method. Let's define a new variable u such that u = x - 2. Then, we have:
+
+du/dx = 1
+
+Now, we can rewrite the differential equation in terms of u:
+
+dy/dx = 3u^2
+
+Since y' = dy/dx, we have:
+
+dy/du = 3u^2
+
+Now, we can integrate both sides with respect to u:
+
+∫(dy/du) du = ∫3u^2 du
+
+y(u) = u^3 + C
+
+Now, we need to find the constant C using the initial condition y(2) = 5. When u = 0 (since u = x - 2 and x = 2), we have:
+
+y(0) = 0^3 + C = C
+
+Since y(0) = 5, we have:
+
+C = 5
+
+So, the solution in terms of u is:
+
+y(u) = u^3 + 5
+
+Now, we can substitute back u = x - 2:
+
+y(x) = (x - 2)^3 + 5
+
+This is the solution to the differential equation y' = 3(x - 2)^2 with the initial condition y(2) = 5.",2,3,5,"{""correctness"": ""The final answer y(x) = (x - 2)^3 + 5 is fully correct. This can be verified: y'(x) = 3(x-2)^2 matches the differential equation, and y(2) = 0 + 5 = 5 satisfies the initial condition."", ""reasoning_quality"": ""The reasoning is clear, well-structured, and conceptually grounded. The student properly introduces the substitution u = x - 2, transforms the differential equation, integrates correctly, applies the initial condition appropriately (recognizing that x = 2 corresponds to u = 0), and substitutes back to get the final answer."", ""meta_reasoning"": ""The student explicitly maps the variant problem to the base concept by recognizing the structural analogy between the two problems. They use the substitution u = x - 2 to transform the variant into the same form as the textbook problem (y' = 3u^2 with y(0) = constant), demonstrating clear conceptual transfer. The response explicitly acknowledges using 'substitution or analogy with the previous solution' as requested, showing meta-awareness of how the shifted problem relates to the original.""}",
+12,Microsoft-Phi-3.5,12,27,A fair six-sided die is rolled once. Let X be the outcome. Compute E[X].,"To compute the expected value (E[X]) of a random variable X, we need to sum the products of each outcome and its probability. For a fair six-sided die, each side has an equal probability of landing face up.
+
+Let's denote the outcomes as S = {1, 2, 3, 4, 5, 6}. The probability of each outcome is 1/6 since the die is fair.
+
+Now, we can compute the expected value:
+
+E[X] = Σ (x * P(X = x))
+     = (1 * 1/6) + (2 * 1/6) + (3 * 1/6) + (4 * 1/6) + (5 * 1/6) + (6 * 1/6)
+     = (1/6) * (1 + 2 + 3 + 4 + 5 + 6)
+     = (1/6) * 21
+     = 3.5
+
+So, the expected value of the outcome when rolling a fair six-sided die once is 3.5.","Let X be the outcome of a fair six-sided die, so E[X] = 3.5. Define Y = 7 - X. Without recomputing from the distribution, use linearity of expectation or symmetry to compute E[Y].","To compute E[Y] without recomputing from the distribution, we can use the linearity of expectation and the fact that Y is a transformation of X.
+
+Given that Y = 7 - X, we can express the expected value of Y as:
+
+E[Y] = E[7 - X]
+
+Using the linearity of expectation, which states that E[aX + b] = aE[X] + b for any constants a and b, we can rewrite the above expression as:
+
+E[Y] = 7E[1] - E[X]
+
+Since E[1] is simply the expected value of a constant, which is the constant itself, we have E[1] = 1. Now we can plug in the known values:
+
+E[Y] = 7 * 1 - 3.5
+E[Y] = 7 - 3.5
+E[Y] = 3.5
+
+So, the expected value of Y is also 3.5. This result makes sense because Y is a linear transformation of X, and the expected value of a linear transformation of a random variable is the transformation of the expected value of the original variable. In this case, since the transformation is a reflection across the vertical line x = 3.5 (because 7 - X is the same as saying ""7 minus the outcome of the die""), the expected value remains the same.",2,2,4,"{""correctness"": ""The final answer E[Y] = 3.5 is correct. The computation arrives at the right result."", ""reasoning_quality"": ""The response correctly applies linearity of expectation, though the notation 'E[7 - X] = 7E[1] - E[X]' is unconventional and slightly awkward. The standard approach would be E[7 - X] = E[7] - E[X] = 7 - 3.5 directly, or using E[aX + b] = aE[X] + b with a = -1 and b = 7. The interpretation involving 'E[1] = 1' works but is unnecessarily convoluted. The symmetry explanation at the end is a nice conceptual addition."", ""meta_reasoning"": ""The response successfully applies the conceptual shortcut (linearity of expectation) as requested, avoiding recomputation from the distribution. It explicitly identifies the relevant property and applies it to the variant. The mention of symmetry at the end shows additional conceptual understanding. However, the application is slightly awkward in notation, preventing a perfect score of 5 for explicit, clean mapping to the base concept.""}",
+13,Microsoft-Phi-3.5,13,28,"Compute the definite integral \int_0^1 (2x + 1) \, dx.","To compute the definite integral \(\int_0^1 (2x + 1) \, dx\), we first find the antiderivative of the function \(2x + 1\).
+
+The antiderivative of \(2x\) is \(x^2\), and the antiderivative of \(1\) is \(x\). So, the antiderivative of \(2x + 1\) is \(x^2 + x\).
+
+Now, we evaluate the antiderivative at the limits of integration:
+
+\((x^2 + x)\Big|_0^1 = (1^2 + 1) - (0^2 + 0) = (1 + 1) - 0 = 2\).
+
+So, the definite integral \(\int_0^1 (2x + 1) \, dx\) is equal to 2.","Let F(x) = \int_0^x (2t + 1) \, dt. Using properties of antiderivatives and the Fundamental Theorem of Calculus, compute F(1) without performing a full integral from scratch if possible.","To compute F(1), we can use the Fundamental Theorem of Calculus, which states that if F(x) is an antiderivative of f(t), then:
+
+F(x) = F(b) - F(a) = ∫[a, b] f(t) dt
+
+In this case, f(t) = 2t + 1. We need to find an antiderivative F(t) of f(t) and then evaluate F(1) - F(0).
+
+An antiderivative of f(t) = 2t + 1 is F(t) = t^2 + t + C, where C is the constant of integration. We can ignore C since we are interested in the difference F(1) - F(0).
+
+Now, we can evaluate F(1) and F(0):
+
+F(1) = (1)^2 + (1) = 1 + 1 = 2
+F(0) = (0)^2 + (0) = 0
+
+So, F(1) - F(0) = 2 - 0 = 2
+
+Therefore, F(1) = 2.",2,2,2,"{""correctness"": ""The final answer F(1) = 2 is correct. The computation is accurate and matches the expected result."", ""reasoning_quality"": ""The reasoning is coherent and follows a logical structure. The model correctly identifies the need to find an antiderivative and apply the Fundamental Theorem of Calculus. However, there is some notational confusion where F(x) is used both for the integral function defined in the problem and for the antiderivative, which could cause confusion."", ""meta_reasoning"": ""The variant problem explicitly asks to use properties of antiderivatives and FTC to compute F(1) 'without performing a full integral from scratch if possible.' The model essentially performs the same full integration process as in the textbook problem rather than recognizing that F(1) = ∫_0^1 (2t+1)dt is exactly the same integral already computed in the textbook problem. A higher meta-reasoning score would require explicitly mapping the variant to the base concept (recognizing F(1) equals the previously computed integral) or applying a conceptual shortcut. The model solves correctly but does not leverage the connection to avoid redundant work.""}",
+14,Microsoft-Phi-3.5,14,29,"A data set consists of the values [1, 3, 3, 6, 7, 8, 9]. Compute the median of this data set.","To find the median of the given data set [1, 3, 3, 6, 7, 8, 9], we first need to arrange the data in ascending order:
+
+1, 3, 3, 6, 7, 8, 9
+
+Since there are 7 values in the data set, which is an odd number, the median will be the middle value. In this case, the middle value is the 4th value:
+
+1, 3, 3, 6, 7, 8, 9
+
+The median of this data set is 6.","A data set consists of the values [1, 3, 3, 6, 7, 8, 9] with median 6. A new data set is formed by duplicating each value, so each of the seven numbers now appears twice. Without listing all 14 values explicitly, determine the median of the new data set.","The median of a data set is the middle value when the data set is ordered from least to greatest. In the original data set [1, 3, 3, 6, 7, 8, 9], the median is 6, which is the fourth value when the data set is ordered.
+
+When each value in the data set is duplicated, the order of the data set does not change because the duplicates are identical to the original values. Therefore, the fourth value in the new data set will still be the median.
+
+Since the original median was 6, and the order of the data set remains the same, the median of the new data set will also be 6.
+
+So, the median of the new data set is 6.",2,1,2,"{""correctness"": ""The answer of 6 is correct. When duplicating each value in [1, 3, 3, 6, 7, 8, 9], the new sorted dataset would be [1, 1, 3, 3, 3, 3, 6, 6, 7, 7, 8, 8, 9, 9]. With 14 values (even count), the median is the average of the 7th and 8th values, which are both 6, giving median = 6."", ""reasoning_quality"": ""The reasoning arrives at the correct answer but through flawed logic. The claim that 'the fourth value in the new data set will still be the median' is incorrect - with 14 values, the median is the average of positions 7 and 8, not position 4. The conclusion happens to be correct because both positions 7 and 8 contain the value 6, but the reasoning path is poorly structured and contains errors."", ""meta_reasoning"": ""The response attempts to solve the variant without listing all 14 values as requested, but does so inefficiently and with incorrect reasoning about position preservation. It does not properly apply the conceptual understanding that with duplication, each original value now occupies two consecutive positions, and the median positions shift accordingly. The response fails to explicitly map the variant to the base concept of how median position changes with even vs odd counts.""}",
