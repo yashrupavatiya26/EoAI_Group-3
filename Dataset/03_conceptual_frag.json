@@ -1,0 +1,212 @@
+[
+  {
+    "index": 1,
+    "question": "Let A be the 2×2 matrix A = [[2, 1], [1, 2]]. Find all eigenvalues of A.",
+    "answer": "1, 3",
+    "human_type": "Set",
+    "difficulty": "medium"
+  },
+  {
+    "index": 2,
+    "question": "Solve the differential equation y'' + 4y' + 4y = 0 for y(t). Give the general solution.",
+    "answer": "y(t) = (C_1 + C_2 t)e^{-2t}",
+    "human_type": "Expression",
+    "difficulty": "medium"
+  },
+  {
+    "index": 3,
+    "question": "Three fair coins are flipped. What is the probability of getting exactly 2 heads?",
+    "answer": "3/8",
+    "human_type": "Real",
+    "difficulty": "easy"
+  },
+  {
+    "index": 4,
+    "question": "Compute the definite integral \\int_0^1 x^2 \\, dx.",
+    "answer": "1/3",
+    "human_type": "Real",
+    "difficulty": "easy"
+  },
+  {
+    "index": 5,
+    "question": "A data set consists of the values [1, 2, 3, 4]. Compute the mean of this data set.",
+    "answer": "2.5",
+    "human_type": "Real",
+    "difficulty": "easy"
+  },
+  {
+    "index": 6,
+    "question": "Let B be the 3×3 diagonal matrix B = diag(2, -1, 3). Find all eigenvalues of B.",
+    "answer": "2, -1, 3",
+    "human_type": "Set",
+    "difficulty": "medium"
+  },
+  {
+    "index": 7,
+    "question": "Solve the differential equation y' + 2y = 0 for y(t). Give the general solution.",
+    "answer": "y(t) = C e^{-2t}",
+    "human_type": "Expression",
+    "difficulty": "easy"
+  },
+  {
+    "index": 8,
+    "question": "Let X be the number of heads obtained when 3 fair coins are flipped. What is P(X \\ge 1)?",
+    "answer": "7/8",
+    "human_type": "Real",
+    "difficulty": "easy"
+  },
+  {
+    "index": 9,
+    "question": "Compute the definite integral \\int_0^{\\pi} \\sin x \\, dx.",
+    "answer": "2",
+    "human_type": "Real",
+    "difficulty": "easy"
+  },
+  {
+    "index": 10,
+    "question": "A data set consists of the values [1, 2, 3, 4]. Treating this as a population, compute the population variance.",
+    "answer": "1.25",
+    "human_type": "Real",
+    "difficulty": "medium"
+  },
+  {
+    "index": 11,
+    "question": "Consider the 2×2 matrix R = [[0, -1], [1, 0]], which represents a 90° counterclockwise rotation in the plane. Find all eigenvalues of R.",
+    "answer": "i, -i",
+    "human_type": "Complex",
+    "difficulty": "medium"
+  },
+  {
+    "index": 12,
+    "question": "Solve the initial value problem y' = 3x^2 with y(0) = 1. Find y(x).",
+    "answer": "y(x) = x^3 + 1",
+    "human_type": "Expression",
+    "difficulty": "easy"
+  },
+  {
+    "index": 13,
+    "question": "A fair six-sided die is rolled once. Let X be the outcome. Compute E[X].",
+    "answer": "3.5",
+    "human_type": "Real",
+    "difficulty": "easy"
+  },
+  {
+    "index": 14,
+    "question": "Compute the definite integral \\int_0^1 (2x + 1) \\, dx.",
+    "answer": "2",
+    "human_type": "Real",
+    "difficulty": "easy"
+  },
+  {
+    "index": 15,
+    "question": "A data set consists of the values [1, 3, 3, 6, 7, 8, 9]. Compute the median of this data set.",
+    "answer": "6",
+    "human_type": "Real",
+    "difficulty": "easy"
+  },
+  {
+    "index": 16,
+    "question": "Let A be the 2×2 matrix A = [[2, 1], [1, 2]] with eigenvalues 1 and 3. Without computing A^2 explicitly, find all eigenvalues of the matrix B = A^2 + 3I.",
+    "answer": "4, 12",
+    "human_type": "Set",
+    "difficulty": "hard"
+  },
+  {
+    "index": 17,
+    "question": "Consider the differential equation y'' + 4y' + 4y = 0. (a) Classify the damping behavior (overdamped, critically damped, or underdamped). (b) Find the unique solution satisfying y(0) = 1 and y'(0) = 0.",
+    "answer": "critically damped, y(t) = (1 + 2t)e^{-2t}",
+    "human_type": "Expression",
+    "difficulty": "hard"
+  },
+  {
+    "index": 18,
+    "question": "Three biased coins are flipped, each showing heads with probability 0.6 and tails with probability 0.4, independently. What is the probability of obtaining at least 2 heads?",
+    "answer": "81/125",
+    "human_type": "Real",
+    "difficulty": "medium"
+  },
+  {
+    "index": 19,
+    "question": "Suppose you already know that \\int_0^1 x^2 \\, dx = 1/3. Using this or otherwise, compute \\int_0^2 4x^2 \\, dx without re-integrating from scratch.",
+    "answer": "32/3",
+    "human_type": "Real",
+    "difficulty": "medium"
+  },
+  {
+    "index": 20,
+    "question": "A data set [1, 2, 3, 4, 10] was entered into software, which reported a mean of 4. However, the value 10 was later discovered to be an erroneous outlier and should be removed. Using the original mean 4, compute the corrected mean of the remaining four data points without recomputing all the sums from scratch.",
+    "answer": "2.5",
+    "human_type": "Real",
+    "difficulty": "medium"
+  },
+  {
+    "index": 21,
+    "question": "Let B be a 3×3 matrix with eigenvalues 2, -1, and 3. Consider the matrix C = A^{-1} + I, where A = B. Without computing any matrix inverses explicitly, find all eigenvalues of C.",
+    "answer": "3/2, 0, 4/3",
+    "human_type": "Set",
+    "difficulty": "hard"
+  },
+  {
+    "index": 22,
+    "question": "Consider the homogeneous differential equation y' + 2y = 0 with general solution y(t) = C e^{-2t}. Now consider the nonhomogeneous equation z' + 2z = 6 with initial condition z(0) = 0. Use the structure of the homogeneous solution or an integrating factor to find z(t).",
+    "answer": "z(t) = 3(1 - e^{-2t})",
+    "human_type": "Expression",
+    "difficulty": "medium"
+  },
+  {
+    "index": 23,
+    "question": "Let X be Binomial(3, 0.5), the number of heads in 3 fair coin flips. Using linearity of expectation instead of enumerating all outcomes, compute E[2X - 1].",
+    "answer": "2",
+    "human_type": "Real",
+    "difficulty": "medium"
+  },
+  {
+    "index": 24,
+    "question": "You know that \\int_0^{\\pi} \\sin x \\, dx = 2. Use this fact to compute \\int_0^{\\pi} (3 + 2 \\sin x) \\, dx without doing any trigonometric integration from scratch.",
+    "answer": "3\\pi + 4",
+    "human_type": "Real",
+    "difficulty": "medium"
+  },
+  {
+    "index": 25,
+    "question": "A data set consists of the values [1, 2, 3, 4] with population variance 1.25. A new data set is formed by adding 5 to every value, giving [6, 7, 8, 9]. Without recomputing all deviations, determine the population variance of the new data set.",
+    "answer": "1.25",
+    "human_type": "Real",
+    "difficulty": "easy"
+  },
+  {
+    "index": 26,
+    "question": "The matrix R = [[0, -1], [1, 0]] represents a 90° counterclockwise rotation in the plane and has eigenvalues i and -i. Consider S = R^4. Without multiplying matrices explicitly, determine all eigenvalues of S.",
+    "answer": "1, 1",
+    "human_type": "Set",
+    "difficulty": "medium"
+  },
+  {
+    "index": 27,
+    "question": "The function y(x) = x^3 + 1 solves the initial value problem y' = 3x^2 with y(0) = 1. Now consider the differential equation y' = 3(x - 2)^2 with initial condition y(2) = 5. Use a substitution or analogy with the previous solution to find y(x).",
+    "answer": "y(x) = (x - 2)^3 + 5",
+    "human_type": "Expression",
+    "difficulty": "medium"
+  },
+  {
+    "index": 28,
+    "question": "Let X be the outcome of a fair six-sided die, so E[X] = 3.5. Define Y = 7 - X. Without recomputing from the distribution, use linearity of expectation or symmetry to compute E[Y].",
+    "answer": "3.5",
+    "human_type": "Real",
+    "difficulty": "easy"
+  },
+  {
+    "index": 29,
+    "question": "Let F(x) = \\int_0^x (2t + 1) \\, dt. Using properties of antiderivatives and the Fundamental Theorem of Calculus, compute F(1) without performing a full integral from scratch if possible.",
+    "answer": "2",
+    "human_type": "Real",
+    "difficulty": "easy"
+  },
+  {
+    "index": 30,
+    "question": "A data set consists of the values [1, 3, 3, 6, 7, 8, 9] with median 6. A new data set is formed by duplicating each value, so each of the seven numbers now appears twice. Without listing all 14 values explicitly, determine the median of the new data set.",
+    "answer": "6",
+    "human_type": "Real",
+    "difficulty": "easy"
+  }
+]

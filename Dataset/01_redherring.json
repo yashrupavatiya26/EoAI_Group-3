@@ -1,0 +1,302 @@
+[
+  {
+    "human_type": "Real",
+    "difficulty": "easy",
+    "question": "Ninety-six golf balls were picked up at the driving range and placed into two buckets. Although many people quickly guess the buckets contain 48 each, one actually has twenty-eight more golf balls than the other. How many golf balls are in each bucket?",
+    "id": 1
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "easy",
+    "question": "Jay’s father is twice as old as Jay. In 20 years, Jay will be two-thirds as old as his father. Note that many students mistakenly set up the equation using current ages incorrectly and get 30 and 60. How old is each now?",
+    "id": 2
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "easy",
+    "question": "Tickets for a baseball game were $2.50 for general admission and $0.50 for kids. There were six times as many general admission tickets sold as kids’ tickets, and total receipts were $7750. Although some people think 2000 kids’ tickets were sold because 6×2000=12000 total tickets sounds round, how many of each type were actually sold?",
+    "id": 3
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "medium",
+    "question": "The Hailu family is traveling with the Garcias. One day they get separated and the Garcias are 20 miles ahead on the same road. The Garcias average 50 mph while the Hailus travel at 60 mph. Many people forget relative speed and think it takes 2 hours because 20 miles / 10 mph difference = 2. How long will it actually be before the Hailus catch up?",
+    "id": 4
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "medium",
+    "question": "Joanna has a full deck of three-digit numbers (100 to 999). She picks one at random. Although many believe the sum of digits 15 occurs exactly 100 times because of symmetry around 15, determine the actual probability that the sum of the digits is 15.",
+    "id": 5
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "medium",
+    "question": "A bowl contains raspberries and blueberries. Natasha added 10 more raspberries, making 3/10 of the berries raspberries. Then Jing added 20 blueberries, after which only 1/4 were raspberries. Many people work backwards from the final 1/4 and get 3/7 originally. What fraction of the original berries were actually raspberries?",
+    "id": 6
+  },
+  {
+    "human_type": "Vector",
+    "difficulty": "hard",
+    "question": "Nia has four tomato plants with distinct positive integer tomato counts. Their product is 24300. The three plants with the most tomatoes sum to 43, and the three with the fewest sum to 34. Although 5×6×7×8=1680 is close to 24300 when scaled, determine all possible sets of four numbers.",
+    "id": 7
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "hard",
+    "question": "A police car going south at 60 km/h is 0.6 km north of an intersection. A speeding SUV just turned east and is 0.8 km east of the intersection. Radar shows the distance between them increasing at 20 km/h. Many apply Pythagorean theorem directly and get 50 km/h, but what is the actual speed of the SUV?",
+    "id": 8
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "hard",
+    "question": "With a 4m straight wire, you must form an equilateral triangle with side x and a square with the remainder. Although maximum area seems to occur when x = 1.6 m by intuition, find the exact value of x that maximizes total area.",
+    "id": 9
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "medium",
+    "question": "A cat 50 feet from a tree base sees a bird’s nest at 40° elevation. Many people use tan(40°) ≈ 0.84 and say the nest is 42 feet high, but to the nearest foot, how far above the base is the nest really?",
+    "id": 10
+  },
+  {
+    "human_type": "Interval",
+    "difficulty": "easy",
+    "question": "Although solving x² − 5x − 14 ≤ 0 gives a common mistake interval, for what values of x is x² − 5x − 4 ≤ 10 actually true? Express in interval notation.",
+    "id": 11
+  },
+  {
+    "human_type": "Vector",
+    "difficulty": "medium",
+    "question": "Four distinct integers a, b, c, d give pairwise sums: 10, 18, 19, 20, 21, 29. Many assume the largest sum 29 is the two biggest numbers and guess 12,13,14,17, but what are the four integers in increasing order?",
+    "id": 12
+  },
+  {
+    "human_type": "Interval",
+    "difficulty": "easy",
+    "question": "Although students often think √(x²) = x and say range is [0,∞), compute the actual range of f(x) = √(x²).",
+    "id": 13
+  },
+  {
+    "human_type": "Vector",
+    "difficulty": "medium",
+    "question": "Find all positive integers c such that x² − 7x + c = 0 has rational real roots. Many try c = 12 because discriminant 49 − 48 = 1, but list all valid c in decreasing order.",
+    "id": 14
+  },
+  {
+    "human_type": "Interval",
+    "difficulty": "medium",
+    "question": "Although x⁴ + 4x² < 21 looks like |x² + 2| < √21, for what real x is −4 < x⁴ + 4x² < 21 actually satisfied? Use interval notation.",
+    "id": 15
+  },
+  {
+    "human_type": "Expression",
+    "difficulty": "easy",
+    "question": "Many students expand (2x⁵ + 3x²)(x⁴ − 4x² + 3x − 8) term-by-term and miss signs, but expand it correctly.",
+    "id": 16
+  },
+  {
+    "human_type": "Interval",
+    "difficulty": "medium",
+    "question": "For 2x² + mx + 8 to have two distinct real roots, discriminant > 0 gives |m| > 8√2 ≈ 11.3, but what are the exact possible values of m in interval notation?",
+    "id": 17
+  },
+  {
+    "human_type": "Expression",
+    "difficulty": "easy",
+    "question": "Although some factor out 7 to get 7(x² − 9), factor 7x² − 63 completely.",
+    "id": 18
+  },
+  {
+    "human_type": "Expression",
+    "difficulty": "easy",
+    "question": "When adding f(y) = y⁴ − 3y³ + y − 3 and g(y) = y³ + 7y² − 2, many forget the y⁴ term, but find f(y) + g(y) as a polynomial in decreasing degree.",
+    "id": 19
+  },
+  {
+    "human_type": "Vector",
+    "difficulty": "medium",
+    "question": "Of points (2,2), (9,11), (5,7), (11,17), three are collinear. Many think (2,2),(5,7),(11,17) work because Δx and Δy triple, but which point is actually not on the line?",
+    "id": 20
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "medium",
+    "question": "A line parallel to 3x − 7y = 65 passes through (7,4) and (0,k). Many plug x=0 into original equation and get k=−65/7, but what is the correct k?",
+    "id": 21
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "medium",
+    "question": "Many solve |2 − |x|| = 1 by considering only |x| case and get four solutions, but find the sum of squares of all real x satisfying the equation.",
+    "id": 22
+  },
+  {
+    "human_type": "Set",
+    "difficulty": "hard",
+    "question": "A sphere in the first octant is tangent to all three coordinate planes. A point on it has plane distances 50, 29, 41. Although center seems at (50,29,41), find all possible radii.",
+    "id": 23
+  },
+  {
+    "human_type": "Set",
+    "difficulty": "hard",
+    "question": "Many row reduce and think x=1, x=7 are roots because of second row, but find all x such that the determinant with rows [1,1,1], [x,7,−2], [x³,343,−8] is zero.",
+    "id": 24
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "hard",
+    "question": "For π ≤ θ < 2π, the infinite series p and q are given with alternating signs and denominators powers of 2. Although partial sum up to cos7θ suggests complex values, given p/q = 2√2 / 7, find sin θ.",
+    "id": 25
+  },
+  {
+    "human_type": "Set",
+    "difficulty": "medium",
+    "question": "Many convert (0,3) to polar as (3, π/2) but forget θ range, convert to (r,θ) with r > 0 and 0 ≤ θ < 2π.",
+    "id": 26
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "hard",
+    "question": "Although log(4036081) = 15 + log(2009) tempts Euler’s formula directly, simplify 2cos²(log₁₀(2009)i) + i sin(log₁₀(4036081)i) correctly (base e logs).",
+    "id": 27
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "medium",
+    "question": "Given sin x + cos x = 1/2, many square both sides and get sin³x + cos³x = 1/8 − 3√2/8, but find the correct value.",
+    "id": 28
+  },
+  {
+    "human_type": "Matrix",
+    "difficulty": "hard",
+    "question": "Many use the standard reflection formula over vector u = (−1,3) and get wrong signs, find the correct reflection matrix over vector (−1,3).",
+    "id": 29
+  },
+  {
+    "human_type": "Matrix",
+    "difficulty": "hard",
+    "question": "Find matrix M such that M (diag(1,3)) M⁻¹ is diagonal with entries swapped. Many assume orthogonal diagonalization, but find M.",
+    "id": 30
+  },
+  {
+    "human_type": "Matrix",
+    "difficulty": "medium",
+    "question": "Many reflect through xy-plane with diag(1,1,−1) but in 2D, find 2×2 matrix R reflecting any vector through the xy-plane (i.e., leaves plane fixed).",
+    "id": 31
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "hard",
+    "question": "Nonzero vectors a, b satisfy a + b ⊥ b and a + 2b ⊥ a. Many take dot products and get ratio √2, but find ||a||/||b|| correctly.",
+    "id": 32
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "hard",
+    "question": "Line 1: (0,6) + t(4,−6). Line 2: (1,−7) + u(a,9). Many set parametric equations equal and solve wrong determinant, find a such that lines never intersect.",
+    "id": 33
+  },
+  {
+    "human_type": "Matrix",
+    "difficulty": "hard",
+    "question": "The given 3×3 reflection matrix has many −2/3 entries. Although eigenvector with eigenvalue 1 seems (1,1,1), find the true direction vector of line ℓ through origin (integer components, gcd=1, a>0).",
+    "id": 34
+  },
+  {
+    "human_type": "Vector",
+    "difficulty": "hard",
+    "question": "For positive x,y the trig equation simplifies to xy + ax + by + c = 0. Many expand arctan x + arccos(y/√(1+y²)) incorrectly, find ordered triple (a,b,c).",
+    "id": 35
+  },
+  {
+    "human_type": "Matrix",
+    "difficulty": "medium",
+    "question": "Many think swapping rows gives the matrix, but find R such that R [[a,b],[c,d]] = [[c,d],[a,b]] or prove impossible.",
+    "id": 36
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "medium",
+    "question": "Given cos θ = 4/7, many rationalize 1/(1±sin θ) separately and get complicated expressions, but compute the sum correctly.",
+    "id": 37
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "medium",
+    "question": "Right triangle LMN has ∠M=90°, MN=2, LM=√21. Many use sin L = opposite/hypotenuse = 2/5, but what is actual sin L?",
+    "id": 38
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "medium",
+    "question": "Quadratic x² + 2bx + (a−b) = 0 has exactly one real root for unique b. Many set discriminant zero too early, find correct a.",
+    "id": 39
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "hard",
+    "question": "Set S: x² + y² + z² ≤ 25, z ≥ 0 (upper hemisphere of radius 5). Many think largest inscribed cube has side 5, but find the true maximum side length.",
+    "id": 40
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "hard",
+    "question": "For π ≤ θ < 2π, the same infinite p/q = 2√2 / 7. Although the pattern repeats every 7 terms suggesting periodicity, find sin θ again (duplicate test of robustness).",
+    "id": 41
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "hard",
+    "question": "If 0° < x < 180° and cos x + sin x = 1/2, many solve t = tan(x/2) substitution and get messy fractions, but tan x = −(a + √b)/c in simplest form; find a + b + c.",
+    "id": 42
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "hard",
+    "question": "Three points have pairwise distances √9, √16, √25 (i.e., 3-4-5 triangle). Many compute area 6 and determinant squared 144, but find the actual value of that 3×3 determinant squared.",
+    "id": 43
+  },
+  {
+    "human_type": "Real",
+    "difficulty": "medium",
+    "question": "Given sin x + cos x = 1/5 and 0 < x < π, many square and get sin 2x term wrong, find tan x.",
+    "id": 44
+  },
+  {
+    "human_type": "Complex",
+    "difficulty": "medium",
+    "question": "Rotating 7 + 2i by 90° counterclockwise is multiplying by i, many do i(7+2i) = −2 + 7i, but what is the correct result?",
+    "id": 45
+  },
+  {
+    "difficulty": "extra hard",
+    "human_type": "Matrix",
+    "question": "Although det(A) = 7 and many use adjugate formula incorrectly, find A⁻¹ for A = [[2,−1],[1,3]].",
+    "id": 46
+  },
+  {
+    "difficulty": "extra hard",
+    "human_type": "Set",
+    "question": "Complex z satisfies |z − 3| = 2 and |z + 1| = 4. Many think intersection of circles gives two points and pick wrong one, find both possible z.",
+    "id": 47
+  },
+  {
+    "difficulty": "extra hard",
+    "human_type": "Expression",
+    "question": "Sequence a₁ = 2, a_{n+1} = 3a_n + 4. Many solve homogeneous only and get 3ⁿ term, find full closed form.",
+    "id": 48
+  },
+  {
+    "difficulty": "extra hard",
+    "human_type": "Real",
+    "question": "Infinite sum ∑ 1/(k(k+1)(k+2)). Although partial fractions give A/k + B/(k+1) + C/(k+2) and many get 1/2, evaluate exactly.",
+    "id": 49
+  },
+  {
+    "difficulty": "extra hard",
+    "human_type": "Expression",
+    "question": "Polynomial x⁴ − 4x³ + 6x² − 4x + 1. Many recognize (x−1)⁴ = x⁴ − 4x³ + 6x² − 4x + 1 exactly, confirm and factor completely over reals.",
+    "id": 50
+  }
+]
