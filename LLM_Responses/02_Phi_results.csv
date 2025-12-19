@@ -1,0 +1,668 @@
+id,model,question,response,response_time_sec,tokens_output,tokens_per_sec
+0,Microsoft-Phi-3.5,"Let A be the 2×2 matrix A = [[2, 1], [1, 2]]. Find all eigenvalues of A.","To find the eigenvalues of a matrix A, we need to solve the characteristic equation given by det(A - λI) = 0, where λ represents the eigenvalues and I is the identity matrix.
+
+For the given matrix A = [[2, 1], [1, 2]], the identity matrix I is [[1, 0], [0, 1]]. Now, we need to find the determinant of (A - λI):
+
+A - λI = [[2 - λ, 1], [1, 2 - λ]]
+
+Now, let's find the determinant:
+
+det(A - λI) = (2 - λ)(2 - λ) - (1)(1)
+
+Expanding and simplifying the expression:
+
+= λ^2 - 4λ + 4 - 1
+= λ^2 - 4λ + 3
+
+Now, we need to find the roots of the quadratic equation:
+
+λ^2 - 4λ + 3 = 0
+
+We can factor this equation:
+
+(λ - 3)(λ - 1) = 0
+
+Setting each factor equal to zero, we get the eigenvalues:
+
+λ - 3 = 0 => λ = 3
+λ - 1 = 0 => λ = 1
+
+So, the eigenvalues of matrix A are λ = 1 and λ = 3.",22.931,323,14.09
+1,Microsoft-Phi-3.5,Solve the differential equation y'' + 4y' + 4y = 0 for y(t). Give the general solution.,"To solve the differential equation y'' + 4y' + 4y = 0, we first find the characteristic equation by replacing y'' with r^2, y' with r, and y with 1:
+
+r^2 + 4r + 4 = 0
+
+Now, we need to factor this quadratic equation:
+
+(r + 2)(r + 2) = 0
+
+This gives us a repeated root:
+
+r = -2
+
+Since we have a repeated root, the general solution for the differential equation is given by:
+
+y(t) = C1 * e^(-2t) + C2 * t * e^(-2t)
+
+where C1 and C2 are arbitrary constants.",11.776,164,13.93
+2,Microsoft-Phi-3.5,Three fair coins are flipped. What is the probability of getting exactly 2 heads?,"To solve this problem, we can use the concept of combinations and the basic probability formula:
+
+Probability = (Number of favorable outcomes) / (Total number of possible outcomes)
+
+Step 1: Determine the total number of possible outcomes
+
+When flipping three fair coins, each coin has two possible outcomes: heads (H) or tails (T). Since there are three coins, the total number of possible outcomes is 2^3 = 8. These outcomes can be listed as follows:
+
+1. HHH
+2. HHT
+3. HTH
+4. HTT
+5. THH
+6. THT
+7. TTH
+8. TTT
+
+Step 2: Determine the number of favorable outcomes
+
+We are interested in the outcomes with exactly 2 heads. There are three such outcomes:
+
+1. HHT
+2. HTH
+3. THH
+
+So, there are 3 favorable outcomes.
+
+Step 3: Calculate the probability
+
+Now, we can use the probability formula:
+
+Probability = (Number of favorable outcomes) / (Total number of possible outcomes)
+Probability = 3 / 8
+
+The probability of getting exactly 2 heads when flipping three fair coins is 3/8 or 0.375.",21.641,311,14.37
+3,Microsoft-Phi-3.5,"Compute the definite integral \int_0^1 x^2 \, dx.","To compute the definite integral \(\int_0^1 x^2 \, dx\), we first find the antiderivative of the function \(x^2\).
+
+The antiderivative of \(x^2\) is \(\frac{1}{3}x^3\), since when we differentiate \(\frac{1}{3}x^3\), we get back \(x^2\).
+
+Now, we evaluate the antiderivative at the limits of integration:
+
+\[\left[\frac{1}{3}x^3\right]_0^1 = \frac{1}{3}(1)^3 - \frac{1}{3}(0)^3 = \frac{1}{3} - 0 = \frac{1}{3}\].
+
+So, the value of the definite integral \(\int_0^1 x^2 \, dx\) is \(\frac{1}{3}\).",13.939,196,14.06
+4,Microsoft-Phi-3.5,"A data set consists of the values [1, 2, 3, 4]. Compute the mean of this data set.","To compute the mean (average) of a data set, you sum all the values and then divide by the number of values.
+
+Given data set: [1, 2, 3, 4]
+
+Step 1: Sum all the values
+1 + 2 + 3 + 4 = 10
+
+Step 2: Count the number of values
+There are 4 values in the data set.
+
+Step 3: Divide the sum by the number of values
+Mean = 10 / 4 = 2.5
+
+So, the mean of the data set [1, 2, 3, 4] is 2.5.",10.557,151,14.3
+5,Microsoft-Phi-3.5,"Let B be the 3×3 diagonal matrix B = diag(2, -1, 3). Find all eigenvalues of B.","To find the eigenvalues of a diagonal matrix, we can directly read them off from the diagonal. The eigenvalues of a diagonal matrix are the elements on its diagonal.
+
+For the given diagonal matrix B = diag(2, -1, 3), the eigenvalues are 2, -1, and 3.
+
+So, the eigenvalues of B are 2, -1, and 3.",5.898,83,14.07
+6,Microsoft-Phi-3.5,Solve the differential equation y' + 2y = 0 for y(t). Give the general solution.,"To solve the differential equation y' + 2y = 0, we can use the method of separation of variables. 
+
+First, rewrite the equation as:
+
+y' = -2y
+
+Now, separate the variables by dividing both sides by y and multiplying both sides by dt:
+
+(dy/y) = -2 dt
+
+Next, integrate both sides:
+
+∫(dy/y) = ∫(-2 dt)
+
+The integral of (dy/y) is ln|y|, and the integral of -2 dt is -2t. So, we have:
+
+ln|y| = -2t + C₁
+
+To solve for y, we can exponentiate both sides:
+
+e^(ln|y|) = e^(-2t + C₁)
+
+Since e^(ln|y|) = |y| and e^(C₁) = C₂ (where C₂ is a constant), we have:
+
+|y| = C₂ * e^(-2t)
+
+Now, we can remove the absolute value by introducing a new constant, C₃, which can be positive or negative:
+
+y = ±C₃ * e^(-2t)
+
+So, the general solution to the differential equation y' + 2y = 0 is:
+
+y(t) = C₃ * e^(-2t)
+
+where C₃ is an arbitrary constant.",22.384,318,14.21
+7,Microsoft-Phi-3.5,Let X be the number of heads obtained when 3 fair coins are flipped. What is P(X \ge 1)?,"To solve this problem, we need to find the probability of getting at least one head when flipping 3 fair coins. We can approach this by first finding the probability of the complementary event (getting no heads) and then subtracting that from 1.
+
+Step 1: Calculate the probability of getting no heads (all tails) when flipping 3 coins.
+
+Since the coins are fair, the probability of getting a tail on a single flip is 1/2. The probability of getting tails on all three flips is the product of the probabilities of getting a tail on each individual flip:
+
+P(all tails) = P(tail on flip 1) * P(tail on flip 2) * P(tail on flip 3)
+P(all tails) = (1/2) * (1/2) * (1/2)
+P(all tails) = 1/8
+
+Step 2: Calculate the probability of getting at least one head.
+
+P(at least one head) = 1 - P(all tails)
+P(at least one head) = 1 - 1/8
+P(at least one head) = 7/8
+
+So, the probability of getting at least one head when flipping 3 fair coins is 7/8.",22.197,305,13.74
+8,Microsoft-Phi-3.5,"Compute the definite integral \int_0^{\pi} \sin x \, dx.","To compute the definite integral \(\int_0^{\pi} \sin x \, dx\), we first find the antiderivative of the function \(\sin x\). The antiderivative of \(\sin x\) is \(-\cos x\).
+
+Now, we evaluate the antiderivative at the upper and lower limits of the integral and subtract the results:
+
+\([- \cos x]_0^{\pi} = -\cos(\pi) - (-\cos(0)) = -(-1) - (-1) = 1 + 1 = 2\).
+
+So, the value of the definite integral \(\int_0^{\pi} \sin x \, dx\) is 2.",10.474,147,14.03
+9,Microsoft-Phi-3.5,"A data set consists of the values [1, 2, 3, 4]. Treating this as a population, compute the population variance.","To compute the population variance, we need to follow these steps:
+
+1. Calculate the mean (average) of the data set.
+2. Subtract the mean from each data point and square the result (to get the squared deviations).
+3. Calculate the average of these squared deviations.
+
+Let's go through these steps with the given data set [1, 2, 3, 4]:
+
+Step 1: Calculate the mean
+Mean = (1 + 2 + 3 + 4) / 4 = 10 / 4 = 2.5
+
+Step 2: Calculate the squared deviations
+(1 - 2.5)^2 = 1.5^2 = 2.25
+(2 - 2.5)^2 = 0.5^2 = 0.25
+(3 - 2.5)^2 = 0.5^2 = 0.25
+(4 - 2.5)^2 = 1.5^2 = 2.25
+
+Step 3: Calculate the average of the squared deviations
+Population variance = (2.25 + 0.25 + 0.25 + 2.25) / 4 = 5 / 4 = 1.25
+
+So, the population variance of the data set [1, 2, 3, 4] is 1.25.",22.809,331,14.51
+10,Microsoft-Phi-3.5,"Consider the 2×2 matrix R = [[0, -1], [1, 0]], which represents a 90° counterclockwise rotation in the plane. Find all eigenvalues of R.","To find the eigenvalues of the matrix R, we need to solve the characteristic equation, which is given by the determinant of (R - λI), where λ is the eigenvalue and I is the identity matrix.
+
+The matrix R is:
+
+R = [[0, -1],
+     [1,  0]]
+
+The identity matrix I for a 2x2 matrix is:
+
+I = [[1, 0],
+     [0, 1]]
+
+Now, we need to find the matrix (R - λI):
+
+R - λI = [[0 - λ, -1],
+          [1,      0 - λ]]
+
+This simplifies to:
+
+[[-λ, -1],
+ [1, -λ]]
+
+Now, we need to find the determinant of this matrix:
+
+det(-λ, -1, 1, -λ) = (-λ)(-λ) - (-1)(1) = λ^2 + 1
+
+Now, we need to solve the characteristic equation:
+
+λ^2 + 1 = 0
+
+To solve for λ, we can factor the equation as a difference of squares:
+
+(λ - i)(λ + i) = 0
+
+This gives us two eigenvalues:
+
+λ1 = i
+λ2 = -i
+
+So, the eigenvalues of the matrix R are i and -i.",21.955,315,14.35
+11,Microsoft-Phi-3.5,Solve the initial value problem y' = 3x^2 with y(0) = 1. Find y(x).,"To solve the initial value problem y' = 3x^2 with y(0) = 1, we need to integrate the given differential equation and then apply the initial condition to find the constant of integration.
+
+Step 1: Integrate the differential equation y' = 3x^2
+
+The integral of 3x^2 with respect to x is:
+
+∫(3x^2) dx = x^3 + C
+
+where C is the constant of integration.
+
+Step 2: Apply the initial condition y(0) = 1
+
+Now we need to find the value of C by plugging in the initial condition into the integrated equation:
+
+y(0) = (0)^3 + C = 1
+
+0 + C = 1
+
+C = 1
+
+Step 3: Write the final solution for y(x)
+
+Now that we have the value of C, we can write the final solution for y(x):
+
+y(x) = x^3 + 1
+
+So, the solution to the initial value problem y' = 3x^2 with y(0) = 1 is y(x) = x^3 + 1.",18.947,266,14.04
+12,Microsoft-Phi-3.5,A fair six-sided die is rolled once. Let X be the outcome. Compute E[X].,"To compute the expected value (E[X]) of a random variable X, we need to sum the products of each outcome and its probability. For a fair six-sided die, each side has an equal probability of landing face up.
+
+Let's denote the outcomes as S = {1, 2, 3, 4, 5, 6}. The probability of each outcome is 1/6 since the die is fair.
+
+Now, we can compute the expected value:
+
+E[X] = Σ (x * P(X = x))
+     = (1 * 1/6) + (2 * 1/6) + (3 * 1/6) + (4 * 1/6) + (5 * 1/6) + (6 * 1/6)
+     = (1/6) * (1 + 2 + 3 + 4 + 5 + 6)
+     = (1/6) * 21
+     = 3.5
+
+So, the expected value of the outcome when rolling a fair six-sided die once is 3.5.",17.428,252,14.46
+13,Microsoft-Phi-3.5,"Compute the definite integral \int_0^1 (2x + 1) \, dx.","To compute the definite integral \(\int_0^1 (2x + 1) \, dx\), we first find the antiderivative of the function \(2x + 1\).
+
+The antiderivative of \(2x\) is \(x^2\), and the antiderivative of \(1\) is \(x\). So, the antiderivative of \(2x + 1\) is \(x^2 + x\).
+
+Now, we evaluate the antiderivative at the limits of integration:
+
+\((x^2 + x)\Big|_0^1 = (1^2 + 1) - (0^2 + 0) = (1 + 1) - 0 = 2\).
+
+So, the definite integral \(\int_0^1 (2x + 1) \, dx\) is equal to 2.",13.537,190,14.04
+14,Microsoft-Phi-3.5,"A data set consists of the values [1, 3, 3, 6, 7, 8, 9]. Compute the median of this data set.","To find the median of the given data set [1, 3, 3, 6, 7, 8, 9], we first need to arrange the data in ascending order:
+
+1, 3, 3, 6, 7, 8, 9
+
+Since there are 7 values in the data set, which is an odd number, the median will be the middle value. In this case, the middle value is the 4th value:
+
+1, 3, 3, 6, 7, 8, 9
+
+The median of this data set is 6.",9.857,138,14.0
+15,Microsoft-Phi-3.5,"Let A be the 2×2 matrix A = [[2, 1], [1, 2]] with eigenvalues 1 and 3. Without computing A^2 explicitly, find all eigenvalues of the matrix B = A^2 + 3I.","To find the eigenvalues of the matrix B = A^2 + 3I, we can use the properties of eigenvalues and matrix addition.
+
+Let λ be an eigenvalue of A with the corresponding eigenvector x. Then, we have:
+
+A * x = λ * x
+
+Now, let's consider the matrix B = A^2 + 3I. We want to find the eigenvalues of B, so we need to find the eigenvalues of A^2 and 3I separately and then add them together.
+
+First, let's find the eigenvalues of A^2. Since A has eigenvalues 1 and 3, we can find the eigenvalues of A^2 by squaring these eigenvalues:
+
+(1)^2 = 1
+(3)^2 = 9
+
+So, the eigenvalues of A^2 are 1 and 9.
+
+Now, let's find the eigenvalues of 3I. Since I is the identity matrix, its eigenvalues are all 1. Multiplying the identity matrix by 3, we get:
+
+3I * x = 3 * x
+
+So, the eigenvalues of 3I are all 3.
+
+Now, we can find the eigenvalues of B by adding the eigenvalues of A^2 and 3I:
+
+1 + 3 = 4
+9 + 3 = 12
+
+Therefore, the eigenvalues of the matrix B = A^2 + 3I are 4 and 12.",22.77,323,14.19
+16,Microsoft-Phi-3.5,"Consider the differential equation y'' + 4y' + 4y = 0. (a) Classify the damping behavior (overdamped, critically damped, or underdamped). (b) Find the unique solution satisfying y(0) = 1 and y'(0) = 0.","(a) To classify the damping behavior, we first need to find the characteristic equation of the given differential equation. The characteristic equation is obtained by replacing y'' with r^2, y' with r, and y with 1:
+
+r^2 + 4r + 4 = 0
+
+Now, we need to find the roots of this quadratic equation. We can factor it as:
+
+(r + 2)(r + 2) = 0
+
+The roots are r = -2 (with multiplicity 2).
+
+Since we have a repeated root, the damping behavior is critically damped.
+
+(b) For a critically damped system, the general solution of the differential equation is given by:
+
+y(t) = (A + Bt)e^(-2t)
+
+We are given the initial conditions y(0) = 1 and y'(0) = 0. Let's use these to find the constants A and B.
+
+Using y(0) = 1:
+
+1 = (A + B(0))e^(-2(0))
+1 = A
+
+Now, let's find the derivative of y(t):
+
+y'(t) = B*e^(-2t) - 2(A + Bt)e^(-2t)
+
+Using y'(0) = 0:
+
+0 = B*e^(-2(0)) - 2(A + B(0))e^(-2(0))
+0 = B - 2A
+
+Since we already found that A = 1, we can solve for B:
+
+0 = B - 2(1)
+B = 2
+
+So, the unique solution satisfying the given initial conditions is:
+
+y(t) = (1 + 2t)e^(-2t)",29.446,416,14.13
+17,Microsoft-Phi-3.5,"Three biased coins are flipped, each showing heads with probability 0.6 and tails with probability 0.4, independently. What is the probability of obtaining at least 2 heads?","To find the probability of obtaining at least 2 heads, we can find the probability of obtaining exactly 2 heads and the probability of obtaining exactly 3 heads, and then add them together.
+
+The probability of obtaining exactly 2 heads can be found using the binomial probability formula:
+
+P(X = k) = C(n, k) * p^k * (1-p)^(n-k)
+
+where n is the number of trials (in this case, 3 coin flips), k is the number of successful outcomes (in this case, 2 heads), p is the probability of success (in this case, 0.6 for heads), and C(n, k) is the number of combinations of n items taken k at a time.
+
+For exactly 2 heads:
+
+P(X = 2) = C(3, 2) * 0.6^2 * 0.4^1
+P(X = 2) = 3 * 0.36 * 0.4
+P(X = 2) = 0.432
+
+The probability of obtaining exactly 3 heads is:
+
+P(X = 3) = C(3, 3) * 0.6^3 * 0.4^0
+P(X = 3) = 1 * 0.216 * 1
+P(X = 3) = 0.216
+
+Now, we add the probabilities of obtaining exactly 2 heads and exactly 3 heads:
+
+P(at least 2 heads) = P(X = 2) + P(X = 3)
+P(at least 2 heads) = 0.432 + 0.216
+P(at least 2 heads) = 0.648
+
+So, the probability of obtaining at least 2 heads when flipping the three biased coins is 0.648.",31.106,446,14.34
+18,Microsoft-Phi-3.5,"Suppose you already know that \int_0^1 x^2 \, dx = 1/3. Using this or otherwise, compute \int_0^2 4x^2 \, dx without re-integrating from scratch.","Given that \(\int_0^1 x^2 \, dx = \frac{1}{3}\), we can use the properties of definite integrals to compute \(\int_0^2 4x^2 \, dx\).
+
+First, we can factor out the constant 4 from the integral:
+
+\[\int_0^2 4x^2 \, dx = 4 \int_0^2 x^2 \, dx\]
+
+Now, we can use the given value of the integral from 0 to 1 and apply the property of definite integrals that allows us to multiply the integral by a constant:
+
+\[\int_0^2 x^2 \, dx = 4 \int_0^1 x^2 \, dx\]
+
+Since we know that \(\int_0^1 x^2 \, dx = \frac{1}{3}\), we can substitute this value into the equation:
+
+\[\int_0^2 x^2 \, dx = 4 \cdot \frac{1}{3} = \frac{4}{3}\]
+
+Therefore, \(\int_0^2 4x^2 \, dx = \frac{4}{3}\).",18.637,258,13.84
+19,Microsoft-Phi-3.5,"A data set [1, 2, 3, 4, 10] was entered into software, which reported a mean of 4. However, the value 10 was later discovered to be an erroneous outlier and should be removed. Using the original mean 4, compute the corrected mean of the remaining four data points without recomputing all the sums from scratch.","To find the corrected mean without recomputing all the sums from scratch, we can use the original mean and the number of data points to adjust for the erroneous outlier.
+
+The original mean of the data set [1, 2, 3, 4, 10] is given as 4. This mean is calculated by summing all the data points and dividing by the number of data points:
+
+Original mean = (1 + 2 + 3 + 4 + 10) / 5 = 20 / 5 = 4
+
+Now, we know that the mean of the remaining four data points after removing the outlier (10) will be less than the original mean of 4 because the outlier is greater than the original mean.
+
+To find the corrected mean, we can use the following relationship:
+
+Corrected sum = Original sum - Outlier
+Corrected mean = Corrected sum / (Number of data points - 1)
+
+We already know the original sum (20) and the outlier (10), so we can calculate the corrected sum:
+
+Corrected sum = 20 - 10 = 10
+
+Now, we have four data points remaining, so we divide the corrected sum by 4:
+
+Corrected mean = 10 / 4 = 2.5
+
+Therefore, the corrected mean of the remaining data points [1, 2, 3, 4] is 2.5.",24.077,330,13.71
+20,Microsoft-Phi-3.5,"Let B be a 3×3 matrix with eigenvalues 2, -1, and 3. Consider the matrix C = A^{-1} + I, where A = B. Without computing any matrix inverses explicitly, find all eigenvalues of C.","Let's denote the eigenvalues of matrix B as λ1 = 2, λ2 = -1, and λ3 = 3. Since A = B, these are also the eigenvalues of A.
+
+Now, let's consider the matrix C = A^{-1} + I. We want to find the eigenvalues of C without explicitly computing any matrix inverses.
+
+Let μ be an eigenvalue of C. Then, for some non-zero vector v, we have:
+
+Cv = μv
+
+Since C = A^{-1} + I, we can write:
+
+(A^{-1} + I)v = μv
+
+Now, let's distribute the vector v:
+
+A^{-1}v + Iv = μv
+
+We know that Iv = v, so we can rewrite the equation as:
+
+A^{-1}v + v = μv
+
+Now, let's isolate A^{-1}v:
+
+A^{-1}v = μv - v
+
+Since μ is an eigenvalue of C, we have:
+
+A^{-1}v = μ(v - Iv)
+
+Now, let's multiply both sides by A:
+
+A(A^{-1}v) = A(μ(v - Iv))
+
+Since A(A^{-1}) = I, we get:
+
+v = μ(Av - AIv)
+
+Now, let's distribute μ:
+
+v = μAv - μ(AIv)
+
+We know that AIv = I(Av) = Av, so we can rewrite the equation as:
+
+v = μAv - μAv
+
+This simplifies to:
+
+v = (μ - μ)Av
+
+Since μ is an eigenvalue of C, we have:
+
+v = 0v
+
+This implies that v must be the zero vector, which contradicts the fact that v is a non-zero vector. Therefore, there is no eigenvalue μ of C that satisfies the equation v = (μ - μ)Av for a non-zero vector v.
+
+Thus, there are no eigenvalues of C. The eigenvalues of C are undefined.",35.314,501,14.19
+21,Microsoft-Phi-3.5,Consider the homogeneous differential equation y' + 2y = 0 with general solution y(t) = C e^{-2t}. Now consider the nonhomogeneous equation z' + 2z = 6 with initial condition z(0) = 0. Use the structure of the homogeneous solution or an integrating factor to find z(t).,"To solve the nonhomogeneous differential equation z' + 2z = 6 with the initial condition z(0) = 0, we can use the method of undetermined coefficients. This method involves finding a particular solution to the nonhomogeneous equation and then adding it to the general solution of the homogeneous equation.
+
+First, let's find the general solution to the homogeneous equation z' + 2z = 0. The general solution to this equation is of the form:
+
+z_h(t) = C e^{-2t}
+
+where C is an arbitrary constant.
+
+Now, let's find a particular solution to the nonhomogeneous equation z' + 2z = 6. Since the nonhomogeneous term is a constant, we can assume a particular solution of the form:
+
+z_p(t) = A
+
+where A is a constant. Now, let's find the derivative of z_p(t):
+
+z_p'(t) = 0
+
+Now, substitute z_p(t) and z_p'(t) into the nonhomogeneous equation:
+
+0 + 2A = 6
+
+Solving for A, we get:
+
+A = 3
+
+So, the particular solution is:
+
+z_p(t) = 3
+
+Now, the general solution to the nonhomogeneous equation is the sum of the general solution to the homogeneous equation and the particular solution:
+
+z(t) = z_h(t) + z_p(t) = C e^{-2t} + 3
+
+To find the value of C, we use the initial condition z(0) = 0:
+
+0 = C e^{-2(0)} + 3
+0 = C + 3
+
+Solving for C, we get:
+
+C = -3
+
+So, the solution to the nonhomogeneous differential equation with the given initial condition is:
+
+z(t) = -3 e^{-2t} + 3
+
+This is the particular solution that satisfies the initial condition z(0) = 0.",32.273,467,14.47
+22,Microsoft-Phi-3.5,"Let X be Binomial(3, 0.5), the number of heads in 3 fair coin flips. Using linearity of expectation instead of enumerating all outcomes, compute E[2X - 1].","To compute the expected value E[2X - 1], we can use the linearity of expectation, which states that for any random variable X and constants a and b, E[aX + b] = aE[X] + b.
+
+First, we need to find the expected value E[X] of a binomial random variable X with parameters n = 3 and p = 0.5. The expected value of a binomial random variable is given by:
+
+E[X] = n * p
+
+In this case, n = 3 and p = 0.5, so:
+
+E[X] = 3 * 0.5 = 1.5
+
+Now, we can use the linearity of expectation to find E[2X - 1]:
+
+E[2X - 1] = 2E[X] - E[1]
+
+Since E[1] is just 1 (the expected value of a constant is the constant itself), we have:
+
+E[2X - 1] = 2 * 1.5 - 1 = 3 - 1 = 2
+
+So, the expected value E[2X - 1] is 2.",19.079,269,14.1
+23,Microsoft-Phi-3.5,"You know that \int_0^{\pi} \sin x \, dx = 2. Use this fact to compute \int_0^{\pi} (3 + 2 \sin x) \, dx without doing any trigonometric integration from scratch.","Given that \(\int_0^{\pi} \sin x \, dx = 2\), we can use this fact to compute \(\int_0^{\pi} (3 + 2 \sin x) \, dx\) by breaking it down into two separate integrals and then combining the results.
+
+Step 1: Break down the integral into two parts.
+
+\(\int_0^{\pi} (3 + 2 \sin x) \, dx = \int_0^{\pi} 3 \, dx + \int_0^{\pi} 2 \sin x \, dx\)
+
+Step 2: Compute the first integral.
+
+The integral of a constant is just the constant times the length of the interval. In this case, the constant is 3 and the interval is from 0 to \(\pi\).
+
+\(\int_0^{\pi} 3 \, dx = 3 \int_0^{\pi} 1 \, dx = 3[\pi - 0] = 3\pi\)
+
+Step 3: Compute the second integral using the given fact.
+
+We are given that \(\int_0^{\pi} \sin x \, dx = 2\). So,
+
+\(\int_0^{\pi} 2 \sin x \, dx = 2 \int_0^{\pi} \sin x \, dx = 2 \cdot 2 = 4\)
+
+Step 4: Combine the results.
+
+Now, we add the results of the two integrals:
+
+\(3\pi + 4\)
+
+So, \(\int_0^{\pi} (3 + 2 \sin x) \, dx = 3\pi + 4\).",25.593,366,14.3
+24,Microsoft-Phi-3.5,"A data set consists of the values [1, 2, 3, 4] with population variance 1.25. A new data set is formed by adding 5 to every value, giving [6, 7, 8, 9]. Without recomputing all deviations, determine the population variance of the new data set.","The population variance is a measure of how spread out the values in a data set are. It is calculated by taking the average of the squared differences from the mean.
+
+Given that the original data set has a variance of 1.25, we can use the properties of variance to find the variance of the new data set without recomputing all deviations.
+
+When you add a constant to every value in the data set, the mean of the data set will increase by that constant, but the spread of the data (variance) will not change. This is because variance is a measure of the spread of the data around the mean, and adding a constant shifts all data points equally, so their relative positions to each other and to the new mean remain the same.
+
+In this case, we are adding 5 to each value in the original data set [1, 2, 3, 4]. The new data set will be [6, 7, 8, 9]. The mean of the original data set is (1+2+3+4)/4 = 2.5. After adding 5 to each value, the new mean will be 2.5 + 5 = 7.5.
+
+Since the variance does not change when adding a constant to each data point, the population variance of the new data set will be the same as the original, which is 1.25.
+
+Therefore, the population variance of the new data set [6, 7, 8, 9] is also 1.25.",23.777,335,14.09
+25,Microsoft-Phi-3.5,"The matrix R = [[0, -1], [1, 0]] represents a 90° counterclockwise rotation in the plane and has eigenvalues i and -i. Consider S = R^4. Without multiplying matrices explicitly, determine all eigenvalues of S.","To find the eigenvalues of S without explicitly multiplying matrices, we can use the properties of eigenvalues and matrix powers.
+
+Given that R is a 90° counterclockwise rotation matrix, its eigenvalues are i and -i. This is because a 90° counterclockwise rotation in the plane is a unitary matrix (since it preserves the length of vectors and its transpose is its inverse), and the eigenvalues of a unitary matrix have absolute value 1.
+
+Now, let's consider the matrix S = R^4. Since R is a rotation matrix, we know that R^2 is a 180° rotation (because 90° * 2 = 180°), which is equivalent to a reflection across the origin in the plane. A reflection matrix has eigenvalues that are either +1 or -1, because it either preserves or inverts the length of vectors.
+
+When we raise R to the fourth power, we are effectively applying the 90° rotation four times, which corresponds to a full 360° rotation. A full 360° rotation brings a vector back to its original position, which means the transformation is the identity transformation. The identity matrix has eigenvalues of +1, as it leaves all vectors unchanged.
+
+Therefore, the eigenvalues of S = R^4 are all +1. There are no other eigenvalues because the only possible eigenvalues for a matrix that represents a full rotation (360°) are +1 and -1, and since we've established that S is the identity matrix, the eigenvalues are all +1.
+
+In summary, the eigenvalues of S are:
+
+\[\lambda_1 = 1\]
+\[\lambda_2 = 1\]
+\[\lambda_3 = 1\]
+\[\lambda_4 = 1\]
+
+All eigenvalues are +1.",27.964,402,14.38
+26,Microsoft-Phi-3.5,The function y(x) = x^3 + 1 solves the initial value problem y' = 3x^2 with y(0) = 1. Now consider the differential equation y' = 3(x - 2)^2 with initial condition y(2) = 5. Use a substitution or analogy with the previous solution to find y(x).,"To solve the differential equation y' = 3(x - 2)^2 with the initial condition y(2) = 5, we can use a substitution method. Let's define a new variable u such that u = x - 2. Then, we have:
+
+du/dx = 1
+
+Now, we can rewrite the differential equation in terms of u:
+
+dy/dx = 3u^2
+
+Since y' = dy/dx, we have:
+
+dy/du = 3u^2
+
+Now, we can integrate both sides with respect to u:
+
+∫(dy/du) du = ∫3u^2 du
+
+y(u) = u^3 + C
+
+Now, we need to find the constant C using the initial condition y(2) = 5. When u = 0 (since u = x - 2 and x = 2), we have:
+
+y(0) = 0^3 + C = C
+
+Since y(0) = 5, we have:
+
+C = 5
+
+So, the solution in terms of u is:
+
+y(u) = u^3 + 5
+
+Now, we can substitute back u = x - 2:
+
+y(x) = (x - 2)^3 + 5
+
+This is the solution to the differential equation y' = 3(x - 2)^2 with the initial condition y(2) = 5.",23.168,330,14.24
+27,Microsoft-Phi-3.5,"Let X be the outcome of a fair six-sided die, so E[X] = 3.5. Define Y = 7 - X. Without recomputing from the distribution, use linearity of expectation or symmetry to compute E[Y].","To compute E[Y] without recomputing from the distribution, we can use the linearity of expectation and the fact that Y is a transformation of X.
+
+Given that Y = 7 - X, we can express the expected value of Y as:
+
+E[Y] = E[7 - X]
+
+Using the linearity of expectation, which states that E[aX + b] = aE[X] + b for any constants a and b, we can rewrite the above expression as:
+
+E[Y] = 7E[1] - E[X]
+
+Since E[1] is simply the expected value of a constant, which is the constant itself, we have E[1] = 1. Now we can plug in the known values:
+
+E[Y] = 7 * 1 - 3.5
+E[Y] = 7 - 3.5
+E[Y] = 3.5
+
+So, the expected value of Y is also 3.5. This result makes sense because Y is a linear transformation of X, and the expected value of a linear transformation of a random variable is the transformation of the expected value of the original variable. In this case, since the transformation is a reflection across the vertical line x = 3.5 (because 7 - X is the same as saying ""7 minus the outcome of the die""), the expected value remains the same.",21.797,309,14.18
+28,Microsoft-Phi-3.5,"Let F(x) = \int_0^x (2t + 1) \, dt. Using properties of antiderivatives and the Fundamental Theorem of Calculus, compute F(1) without performing a full integral from scratch if possible.","To compute F(1), we can use the Fundamental Theorem of Calculus, which states that if F(x) is an antiderivative of f(t), then:
+
+F(x) = F(b) - F(a) = ∫[a, b] f(t) dt
+
+In this case, f(t) = 2t + 1. We need to find an antiderivative F(t) of f(t) and then evaluate F(1) - F(0).
+
+An antiderivative of f(t) = 2t + 1 is F(t) = t^2 + t + C, where C is the constant of integration. We can ignore C since we are interested in the difference F(1) - F(0).
+
+Now, we can evaluate F(1) and F(0):
+
+F(1) = (1)^2 + (1) = 1 + 1 = 2
+F(0) = (0)^2 + (0) = 0
+
+So, F(1) - F(0) = 2 - 0 = 2
+
+Therefore, F(1) = 2.",19.486,268,13.75
+29,Microsoft-Phi-3.5,"A data set consists of the values [1, 3, 3, 6, 7, 8, 9] with median 6. A new data set is formed by duplicating each value, so each of the seven numbers now appears twice. Without listing all 14 values explicitly, determine the median of the new data set.","The median of a data set is the middle value when the data set is ordered from least to greatest. In the original data set [1, 3, 3, 6, 7, 8, 9], the median is 6, which is the fourth value when the data set is ordered.
+
+When each value in the data set is duplicated, the order of the data set does not change because the duplicates are identical to the original values. Therefore, the fourth value in the new data set will still be the median.
+
+Since the original median was 6, and the order of the data set remains the same, the median of the new data set will also be 6.
+
+So, the median of the new data set is 6.",11.568,162,14.0
